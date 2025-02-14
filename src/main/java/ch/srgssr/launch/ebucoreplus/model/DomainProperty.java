@@ -7,4 +7,8 @@ public interface DomainProperty {
   String getName();
 
   String getDescription();
+
+  default boolean isCollection() {
+    return getDescription().toLowerCase().contains("list of");
+  }
 }
