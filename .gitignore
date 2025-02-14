@@ -1,0 +1,21 @@
+# Build directories
+**/target/
+**/build/
+**/bin/
+
+# Gradle
+.gradle/
+
+# Package Files #
+*.jar
+!gradle-wrapper.jar        # include gradle-wrapper
+*.zip
+*.tar.gz
+*.rar
+
+# IntelliJ
+.idea/
+!.idea/runConfigurations/*      # include runConfigurations
+out/
+*.iml
+*.iws
