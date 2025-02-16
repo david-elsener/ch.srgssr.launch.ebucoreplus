@@ -22,7 +22,7 @@ public class DomainPropertyValue implements DomainProperty {
   @Override
   public SchemaEntity getType() {
     if (valueType.toLowerCase().contains("string") || valueType.toLowerCase().contains("literal")) {
-      return new SimpleJavaType(String.class);
+      return CommonJavaSchemaEntity.STRING;
     }
     if (valueType.toLowerCase().contains("boolean")) {
       return PrimitiveSchemaEntity.BOOLEAN;
