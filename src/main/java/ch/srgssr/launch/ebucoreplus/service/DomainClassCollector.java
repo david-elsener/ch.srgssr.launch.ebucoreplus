@@ -7,7 +7,6 @@ import java.util.Optional;
 import java.util.Set;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.jena.ontology.*;
 import org.semanticweb.owlapi.model.*;
 
 @Slf4j
@@ -149,35 +148,6 @@ public class DomainClassCollector {
     throw new IllegalStateException(
         "unknown restriction type %s for property %s"
             .formatted(restriction.getClass(), restriction.getProperty().toString()));
-  }
-
-  private boolean isSimpleValueProperty(String uri) {
-    return uri.startsWith("http://www.w3.org/2001/XMLSchema#");
-  }
-
-  private boolean isObjectProperty(OntProperty ontProperty) {
-    return ontProperty
-        .getRange()
-        .getURI()
-        .startsWith("http://www.ebu.ch/metadata/ontologies/ebucore/ebucore#");
-  }
-
-  private DomainProperty initializeDomainPropertyValue(OntProperty property) {
-    return DomainPropertyValue.builder()
-        .uri(property.getURI())
-        .name(property.getLocalName())
-        .description(property.getComment("en"))
-        .valueType(property.getRange().getLocalName())
-        .build();
-  }
-
-  private DomainProperty initializeDomainPropertyObject(OntProperty property) {
-    return DomainPropertyObject.builder()
-        .uri(property.getURI())
-        .name(property.getLocalName())
-        .description(property.getComment("en"))
-        .domainClass(findClassByUri(property.getRange().getURI()))
-        .build();
   }
 
   private DomainClass findClassByUri(String uri) {
