@@ -1,10 +1,11 @@
 package ch.srgssr.launch.ebucoreplus;
 
-import ch.srgssr.launch.ebucoreplus.service.DomainGeneratorService;
+import ch.srgssr.launch.ebucoreplus.service.DomainClassCollector;
+import ch.srgssr.launch.ebucoreplus.service.DomainClassGenerator;
 import java.io.IOException;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.jena.ontology.OntModelSpec;
-import org.apache.jena.rdf.model.ModelFactory;
+import org.semanticweb.owlapi.apibinding.OWLManager;
+import org.semanticweb.owlapi.model.OWLOntologyCreationException;
 
 @Slf4j
 public class DomainGenerator {
@@ -13,12 +14,17 @@ public class DomainGenerator {
 
   public static void main(String[] args) {
     try (var inputStream = DomainGenerator.class.getResourceAsStream(EBUCOREPLUS_RDF)) {
-      var model = ModelFactory.createOntologyModel(OntModelSpec.RDFS_MEM_RDFS_INF);
-      model.read(inputStream, null);
+      if (inputStream == null) {
+        throw new IllegalStateException("failed to read ebucoreplus ontology");
+      }
+      var manager = OWLManager.createOWLOntologyManager();
+      var ontology = manager.loadOntologyFromOntologyDocument(inputStream);
 
-      var domainClasses = new DomainGeneratorService(model).collectDomainClasses();
+      var domainClasses = new DomainClassCollector(ontology).collectDomainClasses();
       log.info("initialized {} domain classes", domainClasses.size());
-    } catch (IOException exception) {
+      new DomainClassGenerator().generateSourceCode(domainClasses);
+      log.info("generation of domain classes completed successfully");
+    } catch (IOException | OWLOntologyCreationException exception) {
       log.error("failed to read ontology file", exception);
     }
   }

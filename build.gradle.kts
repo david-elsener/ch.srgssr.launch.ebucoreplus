@@ -23,5 +23,6 @@ dependencies {
     implementation(libs.slf4j.api)
     implementation(libs.logback.core)
     implementation(libs.logback.classic)
-    implementation(libs.apache.jena)
+    implementation(libs.owl.api)
+    implementation(libs.java.classgenerator)
 }

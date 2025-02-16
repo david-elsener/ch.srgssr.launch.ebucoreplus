@@ -1,8 +1,9 @@
 [libraries]
-apache-jena = { module = "org.apache.jena:apache-jena-libs", version = "5.3.0" }
 slf4j-api = { module = "org.slf4j:slf4j-api", version = "2.0.16" }
 logback-core = { module = "ch.qos.logback:logback-core", version = "1.5.16" }
 logback-classic = { module = "ch.qos.logback:logback-classic", version = "1.5.16" }
+java-classgenerator = { module = "com.github.vladislavsevruk:java-class-generator", version = "1.0.0" }
+owl-api = { module = "net.sourceforge.owlapi:owlapi-distribution", version = "5.5.1" }
 
 [plugins]
 lombok = { id = "io.freefair.lombok", version = "8.6" }

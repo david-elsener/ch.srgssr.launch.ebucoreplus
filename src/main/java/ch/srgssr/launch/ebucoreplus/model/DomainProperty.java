@@ -1,8 +1,10 @@
 package ch.srgssr.launch.ebucoreplus.model;
 
-public interface DomainProperty {
+import com.github.vladislavsevruk.generator.java.type.SchemaField;
 
-  String getOntUri();
+public interface DomainProperty extends SchemaField {
+
+  String getUri();
 
   String getName();
 
@@ -11,4 +13,5 @@ public interface DomainProperty {
   default boolean isCollection() {
     return getDescription().toLowerCase().contains("list of");
   }
+
 }

@@ -1,13 +1,15 @@
 package ch.srgssr.launch.ebucoreplus.model;
 
+import com.github.vladislavsevruk.generator.java.type.SchemaEntity;
+import java.util.Optional;
 import lombok.Builder;
 import lombok.Data;
 
 @Data
-@Builder
+@Builder(toBuilder = true)
 public class DomainPropertyObject implements DomainProperty {
 
-  private String ontUri;
+  private String uri;
   private String name;
   private String description;
   private DomainClass domainClass;
@@ -19,13 +21,18 @@ public class DomainPropertyObject implements DomainProperty {
         + name
         + '\''
         + ", ontUri='"
-        + ontUri
+        + uri
         + '\''
         + ", description='"
         + description
         + '\''
         + ", domainClass="
-        + domainClass.getOntUri()
+        + Optional.ofNullable(domainClass).map(DomainClass::getUri).orElse(null)
         + '}';
+  }
+
+  @Override
+  public SchemaEntity getType() {
+    return domainClass;
   }
 }
