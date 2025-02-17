@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*The FIMS Essence
-*
-*
-*/@Accessors(chain = true)
+ * The FIMS Essence
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

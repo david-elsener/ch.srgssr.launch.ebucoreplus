@@ -9,28 +9,29 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*assessment of compliance against a Measure
-*
-*<pre>
-Examples:
-*- measuring the maximum volume level in the audio track of a video file
-            - measuring the share of speaker time in a debate of the candidates before an election
-            - measuring the share of male/femals experts across all programmes of a publication service
-        
-</pre>
-*/@Accessors(chain = true)
+ * assessment of compliance against a Measure
+ *
+ * <pre>
+ * Examples:
+ * - measuring the maximum volume level in the audio track of a video file
+ * - measuring the share of speaker time in a debate of the candidates before an election
+ * - measuring the share of male/femals experts across all programmes of a publication service
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class AuditJob extends ProductionJob {
 
-/**
-*To associate a Measure with an AuditJob.
-*
-*/    private Measure usesMeasure;
+    /**
+     * To associate a Measure with an AuditJob.
+     */
+    private Measure usesMeasure;
 
-/**
-*To associate an AuditReport with an AuditJob.
-*
-*/    private AuditReport auditJobRelatedAuditReport;
+    /**
+     * To associate an AuditReport with an AuditJob.
+     */
+    private AuditReport auditJobRelatedAuditReport;
 }

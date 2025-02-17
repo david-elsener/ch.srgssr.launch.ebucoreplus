@@ -2,8 +2,7 @@
 package ch.srgssr.launch.editorial;
 
 /**
-*To define a TextLine type.
-*
-*
-*/public enum TextLineType {
+ * To define a TextLine type.
+ */
+public enum TextLineType {
 }

@@ -5,11 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To define the technique use to measure an audience score.
-        
-*
-*
-*/@Accessors(chain = true)
+ * To define the technique use to measure an audience score.
+ */
+@Accessors(chain = true)
 @Data
 public class AudienceScoreRecordingTechnique {
 }

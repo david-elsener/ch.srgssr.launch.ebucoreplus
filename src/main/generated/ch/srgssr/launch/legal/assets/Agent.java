@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*A resource that acts or has the power to act.
-*
-*
-*/@Accessors(chain = true)
+ * A resource that acts or has the power to act.
+ */
+@Accessors(chain = true)
 @Data
 public class Agent {
 }

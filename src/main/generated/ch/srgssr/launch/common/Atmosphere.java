@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To describe a feeling summarising the atmosphere.
-*
-*
-*/@Accessors(chain = true)
+ * To describe a feeling summarising the atmosphere.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

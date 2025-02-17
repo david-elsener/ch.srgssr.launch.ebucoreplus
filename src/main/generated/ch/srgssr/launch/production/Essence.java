@@ -7,30 +7,30 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*a MediaRessource in the form of a simple file or a complex file package for
-            play-out or publishing
-        
-*
-*<pre>
-Examples:
-*- a mxf file
-            - a file package delivered by a camera of a specific brand
-        
-</pre>
-*/@Accessors(chain = true)
+ * a MediaRessource in the form of a simple file or a complex file package for
+ * play-out or publishing
+ *
+ *
+ * <pre>
+ * Examples:
+ * - a mxf file
+ * - a file package delivered by a camera of a specific brand
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class Essence extends MediaResource {
 
-/**
-*To identify mediaResources used to compose an Essence.
-*
-*/    private MediaResource isComposedOf;
+    /**
+     * To identify mediaResources used to compose an Essence.
+     */
+    private MediaResource isComposedOf;
 
-/**
-*A flag to indicate that the resource/essence is ready for publication.
-        
-*
-*/    private boolean readyForPublication;
+    /**
+     * A flag to indicate that the resource/essence is ready for publication.
+     */
+    private boolean readyForPublication;
 }

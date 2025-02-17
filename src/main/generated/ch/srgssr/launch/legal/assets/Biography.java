@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To record a biography.
-*
-*
-*/@Accessors(chain = true)
+ * To record a biography.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

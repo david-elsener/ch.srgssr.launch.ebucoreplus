@@ -9,47 +9,46 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*a registration identity for a media service
-*
-*<pre>
-Examples:
-*- a registered user to access netflix
-            - a registered family with nicknames and devices to access a VOD service
-        
-</pre>
-*/@Accessors(chain = true)
+ * a registration identity for a media service
+ *
+ * <pre>
+ * Examples:
+ * - a registered user to access netflix
+ * - a registered family with nicknames and devices to access a VOD service
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 public class Account {
 
-/**
-*The terms of a ConsumptionLicence associated with a Contract.
-        
-*
-*/    private ConsumptionLicence holdsLicence;
+    /**
+     * The terms of a ConsumptionLicence associated with a Contract.
+     */
+    private ConsumptionLicence holdsLicence;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*To identify a ConsumptionContract related to an Account.
-        
-*
-*/    private Contract consumptionContract;
+    /**
+     * To identify a ConsumptionContract related to an Account.
+     */
+    private Contract consumptionContract;
 
-/**
-*To link related Acounts.
-*
-*/    private Account relatedAccount;
+    /**
+     * To link related Acounts.
+     */
+    private Account relatedAccount;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 }

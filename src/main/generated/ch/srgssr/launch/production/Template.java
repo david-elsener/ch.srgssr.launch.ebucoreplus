@@ -7,12 +7,10 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*An Essence in the form of a template for Essences with all associated technical
-            parameters
-        
-*
-*
-*/@Accessors(chain = true)
+ * An Essence in the form of a template for Essences with all associated technical
+ * parameters
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

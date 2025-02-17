@@ -7,19 +7,20 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*a name, often accompanied by a logo, and given to an Asset or a Service or a
-            group thereof to distinguish them from Assets or services provided by other manufacturer's or merchant's.
-        
-*
-*<pre>
-Examples:
-*- the name of a PSM organization: "BBC"
-            - the name of a media channel: "BBC4"
-            - the name of a series: "Downton Abbey"
-            - the name of a serial: "BBC News"
-        
-</pre>
-*/@Accessors(chain = true)
+ * a name, often accompanied by a logo, and given to an Asset or a Service or a
+ * group thereof to distinguish them from Assets or services provided by other manufacturer's or merchant's.
+ *
+ *
+ * <pre>
+ * Examples:
+ * - the name of a PSM organization: "BBC"
+ * - the name of a media channel: "BBC4"
+ * - the name of a series: "Downton Abbey"
+ * - the name of a serial: "BBC News"
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

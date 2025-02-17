@@ -9,12 +9,10 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*Identifies the generation of a version of a resource, i.e. master, edit
-            master, distribution copy, etc.
-        
-*
-*
-*/@Accessors(chain = true)
+ * Identifies the generation of a version of a resource, i.e. master, edit
+ * master, distribution copy, etc.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

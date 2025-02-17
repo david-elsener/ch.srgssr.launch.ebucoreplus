@@ -7,40 +7,35 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*Documents of various nature.
-*
-*
-*/@Accessors(chain = true)
+ * Documents of various nature.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class BibliographicalObject extends Asset {
 
-/**
-*To express a reference between an editorial or bibliographical object and its
-            source
-        
-*
-*/    private BibliographicalObject references;
+    /**
+     * To express a reference between an editorial or bibliographical object and its
+     * source
+     */
+    private BibliographicalObject references;
 
-/**
-*To express a reference between an editorial or bibliographical object and its
-            source
-        
-*
-*/    private EditorialObject references;
+    /**
+     * To express a reference between an editorial or bibliographical object and its
+     * source
+     */
+    private EditorialObject references;
 
-/**
-*To described references between a source and a editorial or bibliografical
-            object
-        
-*
-*/    private BibliographicalObject isReferencedBy;
+    /**
+     * To described references between a source and a editorial or bibliografical
+     * object
+     */
+    private BibliographicalObject isReferencedBy;
 
-/**
-*To described references between a source and a editorial or bibliografical
-            object
-        
-*
-*/    private EditorialObject isReferencedBy;
+    /**
+     * To described references between a source and a editorial or bibliografical
+     * object
+     */
+    private EditorialObject isReferencedBy;
 }

@@ -19,243 +19,234 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*a media object that is intended for publication and consumption, attributed with
-            author's rights and copyrights, and representing value.
-        
-*
-*<pre>
-Examples:
-*- a film on tape in the archive
-            - a digital audio recording with associated author's right and copyright
-            - a book
-            - a collection of books
-        
-</pre>
-*/@Accessors(chain = true)
+ * a media object that is intended for publication and consumption, attributed with
+ * author's rights and copyrights, and representing value.
+ *
+ *
+ * <pre>
+ * Examples:
+ * - a film on tape in the archive
+ * - a digital audio recording with associated author's right and copyright
+ * - a book
+ * - a collection of books
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 public class Asset {
 
-/**
-*The date when the Resource was first made available to the public for
-            purchase, download, or online access.
-        
-*
-*/    private Instant dateDistributed;
+    /**
+     * The date when the Resource was first made available to the public for
+     * purchase, download, or online access.
+     */
+    private Instant dateDistributed;
 
-/**
-*The date when the Resource was first made available to the public for
-            purchase, download, or online access.
-        
-*
-*/    private Instant dateReleased;
+    /**
+     * The date when the Resource was first made available to the public for
+     * purchase, download, or online access.
+     */
+    private Instant dateReleased;
 
-/**
-*To identify related EditorialObjects.
-*
-*/    private EditorialObject relatedEditorialObject;
+    /**
+     * To identify related EditorialObjects.
+     */
+    private EditorialObject relatedEditorialObject;
 
-/**
-*To link a Asset to a parent Asset.
-*
-*/    private Asset isParentOf;
+    /**
+     * To link a Asset to a parent Asset.
+     */
+    private Asset isParentOf;
 
-/**
-*To express Rights Clearance.
-*
-*/    private RightsClearance rightsClearance;
+    /**
+     * To express Rights Clearance.
+     */
+    private RightsClearance rightsClearance;
 
-/**
-*To express coverage restrictions.
-*
-*/    private CoverageRestrictions coverageRestrictions;
+    /**
+     * To express coverage restrictions.
+     */
+    private CoverageRestrictions coverageRestrictions;
 
-/**
-*To express Exploitation Issues.
-*
-*/    private ExploitationIssues exploitationIssues;
+    /**
+     * To express Exploitation Issues.
+     */
+    private ExploitationIssues exploitationIssues;
 
-/**
-*To associate a Picture with an EditorialObject
-*
-*/    private Picture relatedPicture;
+    /**
+     * To associate a Picture with an EditorialObject
+     */
+    private Picture relatedPicture;
 
-/**
-*To express Licensing.
-*
-*/    private Licensing licensing;
+    /**
+     * To express Licensing.
+     */
+    private Licensing licensing;
 
-/**
-*To express usage rights.
-*
-*/    private UsageRights usageRights;
+    /**
+     * To express usage rights.
+     */
+    private UsageRights usageRights;
 
-/**
-*To associate an Asset with its AssetValue.
-*
-*/    private AssetValue assetValue;
+    /**
+     * To associate an Asset with its AssetValue.
+     */
+    private AssetValue assetValue;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To identify related Assets.
-*
-*/    private Asset relatedAsset;
+    /**
+     * To identify related Assets.
+     */
+    private Asset relatedAsset;
 
-/**
-*To express copyright.
-*
-*/    private Copyright copyright;
+    /**
+     * To express copyright.
+     */
+    private Copyright copyright;
 
-/**
-*The date when the licence for the Asset ends.
-*
-*/    private Instant dateLicenseEnd;
+    /**
+     * The date when the licence for the Asset ends.
+     */
+    private Instant dateLicenseEnd;
 
-/**
-*To express usage restrictions.
-*
-*/    private UsageRestrictions usageRestrictions;
+    /**
+     * To express usage restrictions.
+     */
+    private UsageRestrictions usageRestrictions;
 
-/**
-*The date of creation of the Asset.
-*
-*/    private Instant dateCreated;
+    /**
+     * The date of creation of the Asset.
+     */
+    private Instant dateCreated;
 
-/**
-*To identify substitution.
-*
-*/    private Asset replaces;
+    /**
+     * To identify substitution.
+     */
+    private Asset replaces;
 
-/**
-*To identify a new version derived from the original.
-*
-*/    private Asset derivedTo;
+    /**
+     * To identify a new version derived from the original.
+     */
+    private Asset derivedTo;
 
-/**
-*The date when the Asset was archived.
-*
-*/    private Instant dateArchived;
+    /**
+     * The date when the Asset was archived.
+     */
+    private Instant dateArchived;
 
-/**
-*Identifies a content-based relationship between two resources.
-        
-*
-*/    private Asset isDerivedFrom;
+    /**
+     * Identifies a content-based relationship between two resources.
+     */
+    private Asset isDerivedFrom;
 
-/**
-*The date when the Resource was deleted.
-*
-*/    private Instant dateDeleted;
+    /**
+     * The date when the Resource was deleted.
+     */
+    private Instant dateDeleted;
 
-/**
-*To identify participating Agents.
-*
-*/    private Agent participatingAgent;
+    /**
+     * To identify participating Agents.
+     */
+    private Agent participatingAgent;
 
-/**
-*To identify substitutions.
-*
-*/    private Asset isReplacedBy;
+    /**
+     * To identify substitutions.
+     */
+    private Asset isReplacedBy;
 
-/**
-*To identify AuditReports associated with an Asset, EditorialObject or
-            Resource.
-        
-*
-*/    private AuditReport relatedAuditReport;
+    /**
+     * To identify AuditReports associated with an Asset, EditorialObject or
+     * Resource.
+     */
+    private AuditReport relatedAuditReport;
 
-/**
-*To provide information on a Contact for an Organisation or a physical person
-            (e.g. the agent of an actor).
-        
-*
-*/    private Contact contact;
+    /**
+     * To provide information on a Contact for an Organisation or a physical person
+     * (e.g. the agent of an actor).
+     */
+    private Contact contact;
 
-/**
-*A flag to indicate that a EditorialObject is member of an ordered group or is
-            an ordered group (e.g. Series)
-        
-*
-*/    private boolean orderedFlag;
+    /**
+     * A flag to indicate that a EditorialObject is member of an ordered group or is
+     * an ordered group (e.g. Series)
+     */
+    private boolean orderedFlag;
 
-/**
-*The date of production of the Asset.
-*
-*/    private Instant dateProduced;
+    /**
+     * The date of production of the Asset.
+     */
+    private Instant dateProduced;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*To express access conditions/restrictions.
-*
-*/    private AccessConditions accessConditions;
+    /**
+     * To express access conditions/restrictions.
+     */
+    private AccessConditions accessConditions;
 
-/**
-*To express Disclaimer.
-*
-*/    private Disclaimer disclaimer;
+    /**
+     * To express Disclaimer.
+     */
+    private Disclaimer disclaimer;
 
-/**
-*To identify a Resource associated with an Asset or an EditorialObject or a
-            PublicationEvent or another Resource.
-        
-*
-*/    private Resource relatedResource;
+    /**
+     * To identify a Resource associated with an Asset or an EditorialObject or a
+     * PublicationEvent or another Resource.
+     */
+    private Resource relatedResource;
 
-/**
-*To express IPR Restrictions.
-*
-*/    private IPRRestrictions iPRRestrictions;
+    /**
+     * To express IPR Restrictions.
+     */
+    private IPRRestrictions iPRRestrictions;
 
-/**
-*The date when the licence for the Asset begins.
-*
-*/    private Instant datelicensedStart;
+    /**
+     * The date when the licence for the Asset begins.
+     */
+    private Instant datelicensedStart;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*To associate a Record with an Asset.
-*
-*/    private Record relatedRecord;
+    /**
+     * To associate a Record with an Asset.
+     */
+    private Record relatedRecord;
 
-/**
-*To identify and Artefact related to EditorialObject or a concept
-        
-*
-*/    private Artefact relatedArtefact;
+    /**
+     * To identify and Artefact related to EditorialObject or a concept
+     */
+    private Artefact relatedArtefact;
 
-/**
-*To link a concept to a parent.
-*
-*/    private Asset isChildOf;
+    /**
+     * To link a concept to a parent.
+     */
+    private Asset isChildOf;
 
-/**
-*The intellectual property or other contractual (e.g. publication) Rights
-            associated to an Asset, a Contract, or a PublicationEvent. Rights originate from a Contract. Rights are
-            associated to EditorialObjects, MediaResource or Essences through the definition of an Asset. Rights have
-            associated RightsHolders.
-        
-*
-*/    private Rights isCoveredBy;
+    /**
+     * The intellectual property or other contractual (e.g. publication) Rights
+     * associated to an Asset, a Contract, or a PublicationEvent. Rights originate from a Contract. Rights are
+     * associated to EditorialObjects, MediaResource or Essences through the definition of an Asset. Rights have
+     * associated RightsHolders.
+     */
+    private Rights isCoveredBy;
 
-/**
-*To indicate the date at which the Asset has been modified.
-        
-*
-*/    private Instant dateModified;
+    /**
+     * To indicate the date at which the Asset has been modified.
+     */
+    private Instant dateModified;
 
-/**
-*To express Creative Commons.
-*
-*/    private CreativeCommons creativeCommons;
+    /**
+     * To express Creative Commons.
+     */
+    private CreativeCommons creativeCommons;
 }

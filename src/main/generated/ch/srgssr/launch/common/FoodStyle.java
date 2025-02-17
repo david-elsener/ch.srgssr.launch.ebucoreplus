@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To define a style of food.
-*
-*
-*/@Accessors(chain = true)
+ * To define a style of food.
+ */
+@Accessors(chain = true)
 @Data
 public class FoodStyle {
 }

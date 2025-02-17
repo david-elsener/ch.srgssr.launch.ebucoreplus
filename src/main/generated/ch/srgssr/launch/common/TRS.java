@@ -5,13 +5,11 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*A temporal reference system, such as a temporal coordinate reference system
-            (with an origin, direction, and scale), a calendar-clock combination, or a (possibly hierarchical) ordinal
-            system.
-        
-*
-*
-*/@Accessors(chain = true)
+ * A temporal reference system, such as a temporal coordinate reference system
+ * (with an origin, direction, and scale), a calendar-clock combination, or a (possibly hierarchical) ordinal
+ * system.
+ */
+@Accessors(chain = true)
 @Data
 public class TRS {
 }

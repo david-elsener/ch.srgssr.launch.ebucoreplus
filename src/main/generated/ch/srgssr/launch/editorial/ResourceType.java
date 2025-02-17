@@ -2,8 +2,7 @@
 package ch.srgssr.launch.editorial;
 
 /**
-*To define a type of resource.
-*
-*
-*/public enum ResourceType {
+ * To define a type of resource.
+ */
+public enum ResourceType {
 }

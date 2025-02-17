@@ -7,12 +7,10 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*A thumbnail is a low resolution picture that can be associated with
-            EditorialObjects or e.g. MediaResources or Contacts.
-        
-*
-*
-*/@Accessors(chain = true)
+ * A thumbnail is a low resolution picture that can be associated with
+ * EditorialObjects or e.g. MediaResources or Contacts.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

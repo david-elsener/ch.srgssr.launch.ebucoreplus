@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*a MediaResource that is a component of another MediaResource
-*
-*
-*/@Accessors(chain = true)
+ * a MediaResource that is a component of another MediaResource
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

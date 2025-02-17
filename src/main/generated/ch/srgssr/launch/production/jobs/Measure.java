@@ -8,62 +8,60 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*act of determining a number and a unit to answer a given question, by counting,
-            comparing, aggregating or calculating
-        
-*
-*<pre>
-Examples:
-*- determining the volume level of audio track
-            - counting the minutes that a speaker has during a debate
-            - counting the number of female experts in all programmes of BBC One
-        
-</pre>
-*/@Accessors(chain = true)
+ * act of determining a number and a unit to answer a given question, by counting,
+ * comparing, aggregating or calculating
+ *
+ *
+ * <pre>
+ * Examples:
+ * - determining the volume level of audio track
+ * - counting the minutes that a speaker has during a debate
+ * - counting the number of female experts in all programmes of BBC One
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 public class Measure {
 
-/**
-*To define the maximum value of a Measure when applicable.
-        
-*
-*/    private String measureValueMax;
+    /**
+     * To define the maximum value of a Measure when applicable.
+     */
+    private String measureValueMax;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To associate a Rule with a Measure.
-*
-*/    private Rule measuresAgainstRule;
+    /**
+     * To associate a Rule with a Measure.
+     */
+    private Rule measuresAgainstRule;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*To define the minimum value of a Measure when applicable.
-        
-*
-*/    private String measureValueMin;
+    /**
+     * To define the minimum value of a Measure when applicable.
+     */
+    private String measureValueMin;
 
-/**
-*To provide the value of a Measure.
-*
-*/    private String measureValue;
+    /**
+     * To provide the value of a Measure.
+     */
+    private String measureValue;
 
-/**
-*To define the unit in which the value of a Measure is expressed, when
-            applicable.
-        
-*
-*/    private Object measureValueUnit;
+    /**
+     * To define the unit in which the value of a Measure is expressed, when
+     * applicable.
+     */
+    private Object measureValueUnit;
 }

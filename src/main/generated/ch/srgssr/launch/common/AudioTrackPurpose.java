@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To describe the purpose of an AudioTrack e.g. dubbing.
-*
-*
-*/@Accessors(chain = true)
+ * To describe the purpose of an AudioTrack e.g. dubbing.
+ */
+@Accessors(chain = true)
 @Data
 public class AudioTrackPurpose {
 }

@@ -7,12 +7,10 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*A key frame is a frame extarcted from video, e.g. representative of a part of
-            a MediaResource.
-        
-*
-*
-*/@Accessors(chain = true)
+ * A key frame is a frame extarcted from video, e.g. representative of a part of
+ * a MediaResource.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

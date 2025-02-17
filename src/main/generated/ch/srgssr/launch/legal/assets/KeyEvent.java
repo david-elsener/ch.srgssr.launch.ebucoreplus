@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To describe a significant event.
-*
-*
-*/@Accessors(chain = true)
+ * To describe a significant event.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

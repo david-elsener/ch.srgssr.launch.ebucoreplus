@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To specify the usage of a text.
-*
-*
-*/@Accessors(chain = true)
+ * To specify the usage of a text.
+ */
+@Accessors(chain = true)
 @Data
 public class TextUsageType {
 }

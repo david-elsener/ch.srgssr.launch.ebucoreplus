@@ -7,44 +7,44 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*a collection of consecutive PublicationEvents of a (typically linear) playout
-            system
-        
-*
-*<pre>
-Examples:
-*- the "as run log" of a linear TV playout system for a full day
-            - the "as run log" of a linear radio playout system for the morning
-        
-</pre>
-*/@Accessors(chain = true)
+ * a collection of consecutive PublicationEvents of a (typically linear) playout
+ * system
+ *
+ *
+ * <pre>
+ * Examples:
+ * - the "as run log" of a linear TV playout system for a full day
+ * - the "as run log" of a linear radio playout system for the morning
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 public class PublicationLog {
 
-/**
-*The start offset within a Resource.
-*
-*/    private TimelinePoint resourceOffset;
+    /**
+     * The start offset within a Resource.
+     */
+    private TimelinePoint resourceOffset;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*the event of publishing an Essence by a service to a channel under rights
-            conditions
-        
-*
-*/    private PublicationEvent loggsPublicationEvent;
+    /**
+     * the event of publishing an Essence by a service to a channel under rights
+     * conditions
+     */
+    private PublicationEvent loggsPublicationEvent;
 
-/**
-*A point of time or start of an interval
-*
-*/    private Instant startDateTime;
+    /**
+     * A point of time or start of an interval
+     */
+    private Instant startDateTime;
 
-/**
-*Describing an end of an interval
-*
-*/    private Instant endDateTime;
+    /**
+     * Describing an end of an interval
+     */
+    private Instant endDateTime;
 }

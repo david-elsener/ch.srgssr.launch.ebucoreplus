@@ -7,14 +7,12 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To provide a definition of the encoding format for audio and video. This is
-            provided as free text in an annotation label or as an identifier pointing to a term in a classification
-            scheme e.g. http://www.ebu.ch/metadata/ontologies/skos/ebu_AudioCompressionCodeCS.rdf or
-            http://www.ebu.ch/metadata/ontologies/skos/ebu_VideoCompressionCodeCS.rdf.
-        
-*
-*
-*/@Accessors(chain = true)
+ * To provide a definition of the encoding format for audio and video. This is
+ * provided as free text in an annotation label or as an identifier pointing to a term in a classification
+ * scheme e.g. http://www.ebu.ch/metadata/ontologies/skos/ebu_AudioCompressionCodeCS.rdf or
+ * http://www.ebu.ch/metadata/ontologies/skos/ebu_VideoCompressionCodeCS.rdf.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

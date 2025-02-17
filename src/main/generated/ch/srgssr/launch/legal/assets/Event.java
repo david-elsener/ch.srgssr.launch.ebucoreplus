@@ -5,66 +5,61 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*An Event related to a Resource, e.g. as depicted in the Resource (real or
-            fictional), etc.
-        
-*
-*
-*/@Accessors(chain = true)
+ * An Event related to a Resource, e.g. as depicted in the Resource (real or
+ * fictional), etc.
+ */
+@Accessors(chain = true)
 @Data
 public class Event {
 
-/**
-*an event associated with the concept
-*
-*/    private Event relatedEvent;
+    /**
+     * an event associated with the concept
+     */
+    private Event relatedEvent;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*To identify a Resource associated with an Asset or an EditorialObject or a
-            PublicationEvent or another Resource.
-        
-*
-*/    private Resource relatedResource;
+    /**
+     * To identify a Resource associated with an Asset or an EditorialObject or a
+     * PublicationEvent or another Resource.
+     */
+    private Resource relatedResource;
 
-/**
-*To associate a concept with an Agent (e.g. Person or Character).
-        
-*
-*/    private Agent relatedAgent;
+    /**
+     * To associate a concept with an Agent (e.g. Person or Character).
+     */
+    private Agent relatedAgent;
 
-/**
-*A location assosiated with the object or consept
-*
-*/    private Location location;
+    /**
+     * A location assosiated with the object or consept
+     */
+    private Location location;
 
-/**
-*A point of time or start of an interval
-*
-*/    private Instant startDateTime;
+    /**
+     * A point of time or start of an interval
+     */
+    private Instant startDateTime;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*Describing an end of an interval
-*
-*/    private Instant endDateTime;
+    /**
+     * Describing an end of an interval
+     */
+    private Instant endDateTime;
 
-/**
-*To identify and Artefact related to EditorialObject or a concept
-        
-*
-*/    private Artefact relatedArtefact;
+    /**
+     * To identify and Artefact related to EditorialObject or a concept
+     */
+    private Artefact relatedArtefact;
 }

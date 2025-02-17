@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*A track with timecode information e.g. in MXF.
-*
-*
-*/@Accessors(chain = true)
+ * A track with timecode information e.g. in MXF.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

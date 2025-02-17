@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*A visual / graphical representation of a concept.
-*
-*
-*/@Accessors(chain = true)
+ * A visual / graphical representation of a concept.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

@@ -7,58 +7,55 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To describe an Award and associated information.
-*
-*
-*/@Accessors(chain = true)
+ * To describe an Award and associated information.
+ */
+@Accessors(chain = true)
 @Data
 public class Award {
 
-/**
-*The Award gievn to an Agent
-*
-*/    private Award beenAwarded;
+    /**
+     * The Award gievn to an Agent
+     */
+    private Award beenAwarded;
 
-/**
-*To provide an date when an Award was delivered.
-*
-*/    private Instant awardDate;
+    /**
+     * To provide an date when an Award was delivered.
+     */
+    private Instant awardDate;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*To associate a concept with an Agent (e.g. Person or Character).
-        
-*
-*/    private Agent relatedAgent;
+    /**
+     * To associate a concept with an Agent (e.g. Person or Character).
+     */
+    private Agent relatedAgent;
 
-/**
-*an event associated with the concept
-*
-*/    private Event relatedEvent;
+    /**
+     * an event associated with the concept
+     */
+    private Event relatedEvent;
 
-/**
-*Logos can be used in a variety of contexts. Logo can be associated with an
-            Organisation or a Service or a PublicationChannel.
-        
-*
-*/    private Logo logo;
+    /**
+     * Logos can be used in a variety of contexts. Logo can be associated with an
+     * Organisation or a Service or a PublicationChannel.
+     */
+    private Logo logo;
 
-/**
-*To provide an Award ceremony name.
-*
-*/    private String awardCeremony;
+    /**
+     * To provide an Award ceremony name.
+     */
+    private String awardCeremony;
 }

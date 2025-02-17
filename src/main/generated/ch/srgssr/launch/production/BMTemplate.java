@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*A template describe as a BMEssence.
-*
-*
-*/@Accessors(chain = true)
+ * A template describe as a BMEssence.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

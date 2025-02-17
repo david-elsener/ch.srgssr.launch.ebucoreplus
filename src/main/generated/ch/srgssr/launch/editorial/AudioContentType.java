@@ -2,8 +2,7 @@
 package ch.srgssr.launch.editorial;
 
 /**
-*to define a type of AudioContent.
-*
-*
-*/public enum AudioContentType {
+ * to define a type of AudioContent.
+ */
+public enum AudioContentType {
 }

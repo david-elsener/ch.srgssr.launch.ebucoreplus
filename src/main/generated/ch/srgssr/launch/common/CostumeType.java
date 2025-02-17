@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To define a costume type.
-*
-*
-*/@Accessors(chain = true)
+ * To define a costume type.
+ */
+@Accessors(chain = true)
 @Data
 public class CostumeType {
 }

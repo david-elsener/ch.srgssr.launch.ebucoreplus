@@ -5,13 +5,11 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To provide information on languages present in the EditorialObject and its
-            purpose. This is provided as free text in an annotation label or as an identifier pointing to a term in a
-            classification scheme.Other language specific types may be added as subclasses of language.
-        
-*
-*
-*/@Accessors(chain = true)
+ * To provide information on languages present in the EditorialObject and its
+ * purpose. This is provided as free text in an annotation label or as an identifier pointing to a term in a
+ * classification scheme.Other language specific types may be added as subclasses of language.
+ */
+@Accessors(chain = true)
 @Data
 public class Language {
 }

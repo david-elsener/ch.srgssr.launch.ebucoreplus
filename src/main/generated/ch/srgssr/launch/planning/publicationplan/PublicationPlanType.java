@@ -2,8 +2,7 @@
 package ch.srgssr.launch.planning.publicationplan;
 
 /**
-*To define a type of publication plan.
-*
-*
-*/public enum PublicationPlanType {
+ * To define a type of publication plan.
+ */
+public enum PublicationPlanType {
 }

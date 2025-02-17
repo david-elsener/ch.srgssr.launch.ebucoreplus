@@ -2,8 +2,7 @@
 package ch.srgssr.launch.publication;
 
 /**
-*To define a type of publication event.
-*
-*
-*/public enum PublicationEventType {
+ * To define a type of publication event.
+ */
+public enum PublicationEventType {
 }

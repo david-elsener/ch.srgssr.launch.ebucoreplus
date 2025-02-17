@@ -7,53 +7,50 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*a report on aggregated results from auditing
-*
-*
-*/@Accessors(chain = true)
+ * a report on aggregated results from auditing
+ */
+@Accessors(chain = true)
 @Data
 public class AuditReport {
 
-/**
-*To identify AuditJobs related to an AuditReport.
-*
-*/    private AuditJob relatedAuditJob;
+    /**
+     * To identify AuditJobs related to an AuditReport.
+     */
+    private AuditJob relatedAuditJob;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*To provide a reference to a Rule against which an AuditJob has been performed
-            through an associated Measure.
-        
-*
-*/    private Rule referencesRule;
+    /**
+     * To provide a reference to a Rule against which an AuditJob has been performed
+     * through an associated Measure.
+     */
+    private Rule referencesRule;
 
-/**
-*To identify an Agent who approved an AuditReport.
-*
-*/    private Agent isApprovedBy;
+    /**
+     * To identify an Agent who approved an AuditReport.
+     */
+    private Agent isApprovedBy;
 
-/**
-*The date of release of an AuditReport.
-*
-*/    private Instant auditReportDate;
+    /**
+     * The date of release of an AuditReport.
+     */
+    private Instant auditReportDate;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*To express the combined results of one or more AuditJobs.
-        
-*
-*/    private String auditReportResults;
+    /**
+     * To express the combined results of one or more AuditJobs.
+     */
+    private String auditReportResults;
 }

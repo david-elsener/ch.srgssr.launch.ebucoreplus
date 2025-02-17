@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To define the function of an AudioChannel.
-*
-*
-*/@Accessors(chain = true)
+ * To define the function of an AudioChannel.
+ */
+@Accessors(chain = true)
 @Data
 public class AudioChannelFunction {
 }

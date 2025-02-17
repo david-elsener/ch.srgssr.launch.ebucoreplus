@@ -11,100 +11,97 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*a Thing that is created, published, distributed and consumed in a media related
-            workflow
-        
-*
-*<pre>
-Examples:
-*- a paper document
-            - a digital document
-            - a digital picture
-            - a vynil record
-            - an audio CD
-            - an audio tape
-            - a video tape
-            - a film dvd
-        
-</pre>
-*/@Accessors(chain = true)
+ * a Thing that is created, published, distributed and consumed in a media related
+ * workflow
+ *
+ *
+ * <pre>
+ * Examples:
+ * - a paper document
+ * - a digital document
+ * - a digital picture
+ * - a vynil record
+ * - an audio CD
+ * - an audio tape
+ * - a video tape
+ * - a film dvd
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 public class Resource {
 
-/**
-*To identify ancillary data in the media resource.
-*
-*/    private AncillaryData ancillaryData;
+    /**
+     * To identify ancillary data in the media resource.
+     */
+    private AncillaryData ancillaryData;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*To identify a Format
-*
-*/    private Format format;
+    /**
+     * To identify a Format
+     */
+    private Format format;
 
-/**
-*To define the resolution of an Asset e.g. video, image...
-        
-*
-*/    private String resolution;
+    /**
+     * To define the resolution of an Asset e.g. video, image...
+     */
+    private String resolution;
 
-/**
-*The date when the Resource was deleted.
-*
-*/    private Instant dateDeleted;
+    /**
+     * The date when the Resource was deleted.
+     */
+    private Instant dateDeleted;
 
-/**
-*The most recent date when the Resource was confirmed to be valid through
-            manual or digital QC.
-        
-*
-*/    private Instant dateValidated;
+    /**
+     * The most recent date when the Resource was confirmed to be valid through
+     * manual or digital QC.
+     */
+    private Instant dateValidated;
 
-/**
-*The Contract through which a Resource is commissioned.
-*
-*/    private Contract isResourceCommissionedBy;
+    /**
+     * The Contract through which a Resource is commissioned.
+     */
+    private Contract isResourceCommissionedBy;
 
-/**
-*The name of the file containing the Resource.
-*
-*/    private String fileName;
+    /**
+     * The name of the file containing the Resource.
+     */
+    private String fileName;
 
-/**
-*Provides the size of a Resource in bytes.
-*
-*/    private double fileSize;
+    /**
+     * Provides the size of a Resource in bytes.
+     */
+    private double fileSize;
 
-/**
-*A locator from where the Resource can be accessed.
-*
-*/    private Locator locator;
+    /**
+     * A locator from where the Resource can be accessed.
+     */
+    private Locator locator;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To define a type of storage associated with a locator from which a Resource
-            can be accessed or can be retrieved.
-        
-*
-*/    private StorageType storageType;
+    /**
+     * To define a type of storage associated with a locator from which a Resource
+     * can be accessed or can be retrieved.
+     */
+    private StorageType storageType;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*To identify storage associated with a locator from which a Resource can be
-            accessed or can be retrieved.
-        
-*
-*/    private Identifier storageId;
+    /**
+     * To identify storage associated with a locator from which a Resource can be
+     * accessed or can be retrieved.
+     */
+    private Identifier storageId;
 }

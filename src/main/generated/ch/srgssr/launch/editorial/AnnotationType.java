@@ -2,8 +2,7 @@
 package ch.srgssr.launch.editorial;
 
 /**
-*To define a type of Annotation.
-*
-*
-*/public enum AnnotationType {
+ * To define a type of Annotation.
+ */
+public enum AnnotationType {
 }

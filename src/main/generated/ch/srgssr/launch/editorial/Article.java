@@ -7,16 +7,17 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*an EditorialWork consisting of text, graphic, sometimes video or audio, created
-            for publication on web-sites, blogs and other channels similar to the more traditional paper-based
-            publications
-        
-*
-*<pre>
-Examples:
-*- a news article on BBC's website
-</pre>
-*/@Accessors(chain = true)
+ * an EditorialWork consisting of text, graphic, sometimes video or audio, created
+ * for publication on web-sites, blogs and other channels similar to the more traditional paper-based
+ * publications
+ *
+ *
+ * <pre>
+ * Examples:
+ * - a news article on BBC's website
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

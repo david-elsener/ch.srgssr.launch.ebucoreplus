@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To define the prupose of a track.
-*
-*
-*/@Accessors(chain = true)
+ * To define the prupose of a track.
+ */
+@Accessors(chain = true)
 @Data
 public class TrackPurpose {
 }

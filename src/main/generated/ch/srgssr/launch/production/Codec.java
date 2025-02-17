@@ -8,41 +8,39 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To provide information on a codec.
-*
-*
-*/@Accessors(chain = true)
+ * To provide information on a codec.
+ */
+@Accessors(chain = true)
 @Data
 public class Codec {
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*To provide information on the product family of the Codec.
-        
-*
-*/    private String codecFamily;
+    /**
+     * To provide information on the product family of the Codec.
+     */
+    private String codecFamily;
 
-/**
-*To provide a name for the vendor of the Codec.
-*
-*/    private Agent codecVendor;
+    /**
+     * To provide a name for the vendor of the Codec.
+     */
+    private Agent codecVendor;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To provide information on the version of the Codec.
-*
-*/    private String codecVersion;
+    /**
+     * To provide information on the version of the Codec.
+     */
+    private String codecVersion;
 }

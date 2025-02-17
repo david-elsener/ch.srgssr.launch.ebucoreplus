@@ -2,8 +2,7 @@
 package ch.srgssr.launch.editorial;
 
 /**
-*To define a type or part.
-*
-*
-*/public enum PartType {
+ * To define a type or part.
+ */
+public enum PartType {
 }

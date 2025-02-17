@@ -7,12 +7,10 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*A member of the cast list (a list of performers/actors and associated
-            fictitious characters).
-        
-*
-*
-*/@Accessors(chain = true)
+ * A member of the cast list (a list of performers/actors and associated
+ * fictitious characters).
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

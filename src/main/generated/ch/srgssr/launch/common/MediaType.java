@@ -9,10 +9,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To provide additional information on the type of media.
-*
-*
-*/@Accessors(chain = true)
+ * To provide additional information on the type of media.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

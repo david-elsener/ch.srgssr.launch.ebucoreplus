@@ -9,10 +9,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To define a type of timed text.
-*
-*
-*/@Accessors(chain = true)
+ * To define a type of timed text.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

@@ -9,37 +9,36 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To describe Food shown or consumed in productions.
-*
-*
-*/@Accessors(chain = true)
+ * To describe Food shown or consumed in productions.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class Food extends Artefact {
 
-/**
-*The Food ingredients or Food items.
-*
-*/    private String foodIngredient;
+    /**
+     * The Food ingredients or Food items.
+     */
+    private String foodIngredient;
 
-/**
-*The country/region of origin of the cuisine
-*
-*/    private CountryCode cuisineOrigin;
+    /**
+     * The country/region of origin of the cuisine
+     */
+    private CountryCode cuisineOrigin;
 
-/**
-*The style of the cuisine
-*
-*/    private CuisineStyle cuisineStyle;
+    /**
+     * The style of the cuisine
+     */
+    private CuisineStyle cuisineStyle;
 
-/**
-*To define a category of Food.
-*
-*/    private String foodCategory;
+    /**
+     * To define a category of Food.
+     */
+    private String foodCategory;
 
-/**
-*The style of Food.
-*
-*/    private FoodStyle foodStyle;
+    /**
+     * The style of Food.
+     */
+    private FoodStyle foodStyle;
 }

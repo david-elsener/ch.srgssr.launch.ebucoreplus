@@ -5,13 +5,11 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*Region Code refers to the code developed by the International Organization
-            for Standardization (ISO). ISO created and maintains the ISO 3166 standard – Codes for the
-            representation of names of countries and their subdivisions.
-        
-*
-*
-*/@Accessors(chain = true)
+ * Region Code refers to the code developed by the International Organization
+ * for Standardization (ISO). ISO created and maintains the ISO 3166 standard – Codes for the
+ * representation of names of countries and their subdivisions.
+ */
+@Accessors(chain = true)
 @Data
 public class RegionCode {
 }

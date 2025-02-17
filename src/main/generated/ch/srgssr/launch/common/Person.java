@@ -15,198 +15,189 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*an individual Agent
-*
-*<pre>
-Examples:
-*- Alfred Hitchcock (director)
-            - James Bond (character)
-            - Sean Connery (actor)
-            - John Ford (pseudonym used by the director John Martin Feeney)
-        
-</pre>
-*/@Accessors(chain = true)
+ * an individual Agent
+ *
+ * <pre>
+ * Examples:
+ * - Alfred Hitchcock (director)
+ * - James Bond (character)
+ * - Sean Connery (actor)
+ * - John Ford (pseudonym used by the director John Martin Feeney)
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class Person extends Agent {
 
-/**
-*To provide the private telephone number of an Agent (Contact/Person).
-        
-*
-*/    private String privateTelephoneNumber;
+    /**
+     * To provide the private telephone number of an Agent (Contact/Person).
+     */
+    private String privateTelephoneNumber;
 
-/**
-*To provide information on the family of a Person.
-*
-*/    private String familyInformation;
+    /**
+     * To provide information on the family of a Person.
+     */
+    private String familyInformation;
 
-/**
-*The family name of a Person.
-*
-*/    private String familyName;
+    /**
+     * The family name of a Person.
+     */
+    private String familyName;
 
-/**
-*To identify the place of birth.
-*
-*/    private Location placeOfBirth;
+    /**
+     * To identify the place of birth.
+     */
+    private Location placeOfBirth;
 
-/**
-*To indicate the height of a person.
-*
-*/    private String personHeight;
+    /**
+     * To indicate the height of a person.
+     */
+    private String personHeight;
 
-/**
-*To provide a link to an identification picture.
-*
-*/    private Picture idPicture;
+    /**
+     * To provide a link to an identification picture.
+     */
+    private Picture idPicture;
 
-/**
-*To indicate the weight of a person.
-*
-*/    private String personWeight;
+    /**
+     * To indicate the weight of a person.
+     */
+    private String personWeight;
 
-/**
-*The given name of a Person.
-*
-*/    private String givenName;
+    /**
+     * The given name of a Person.
+     */
+    private String givenName;
 
-/**
-*The hobbies of a Person.
-*
-*/    private String hobbies;
+    /**
+     * The hobbies of a Person.
+     */
+    private String hobbies;
 
-/**
-*The job / occupation name of a Person.
-*
-*/    private String occupation;
+    /**
+     * The job / occupation name of a Person.
+     */
+    private String occupation;
 
-/**
-*To provide one or more middle names for a Person.
-*
-*/    private String middleName;
+    /**
+     * To provide one or more middle names for a Person.
+     */
+    private String middleName;
 
-/**
-*To provide the office telephone number of an Agent (Contact/Person).
-        
-*
-*/    private String officeTelephoneNumber;
+    /**
+     * To provide the office telephone number of an Agent (Contact/Person).
+     */
+    private String officeTelephoneNumber;
 
-/**
-*The country where the person died
-*
-*/    private CountryCode countryOfDeath;
+    /**
+     * The country where the person died
+     */
+    private CountryCode countryOfDeath;
 
-/**
-*To provide the office mobile telephone number of an Agent (Contact/Person).
-        
-*
-*/    private String officeMobileTelephoneNumber;
+    /**
+     * To provide the office mobile telephone number of an Agent (Contact/Person).
+     */
+    private String officeMobileTelephoneNumber;
 
-/**
-*The username by which a Person is known e.g. when attributing a rating
-            value.
-        
-*
-*/    private String username;
+    /**
+     * The username by which a Person is known e.g. when attributing a rating
+     * value.
+     */
+    private String username;
 
-/**
-*To provide the professional/office email address of an Agent (Contact/Person
-            or Organisation).
-        
-*
-*/    private String officeEmailAddress;
+    /**
+     * To provide the professional/office email address of an Agent (Contact/Person
+     * or Organisation).
+     */
+    private String officeEmailAddress;
 
-/**
-*To provide the private mobile telephone number of an Agent
-            (Contact/Person).
-        
-*
-*/    private String privateMobileTelephoneNumber;
+    /**
+     * To provide the private mobile telephone number of an Agent
+     * (Contact/Person).
+     */
+    private String privateMobileTelephoneNumber;
 
-/**
-*To provide a salutation title e.g M. Ms, Dr, Pr.
-*
-*/    private String salutationTitle;
+    /**
+     * To provide a salutation title e.g M. Ms, Dr, Pr.
+     */
+    private String salutationTitle;
 
-/**
-*The date when a Contact/Person has passed away.
-*
-*/    private Instant dateOfDeath;
+    /**
+     * The date when a Contact/Person has passed away.
+     */
+    private Instant dateOfDeath;
 
-/**
-*To identify the key career events of a Person.
-*
-*/    private KeyCareerEvent keyCareerEvent;
+    /**
+     * To identify the key career events of a Person.
+     */
+    private KeyCareerEvent keyCareerEvent;
 
-/**
-*A property to establish the relation between a Contact/Person and an
-            Organisation.
-        
-*
-*/    private Affiliation affiliation;
+    /**
+     * A property to establish the relation between a Contact/Person and an
+     * Organisation.
+     */
+    private Affiliation affiliation;
 
-/**
-*To provide a suffix associated with a Person name e.g. Jr.
-        
-*
-*/    private String suffix;
+    /**
+     * To provide a suffix associated with a Person name e.g. Jr.
+     */
+    private String suffix;
 
-/**
-*The gender of a Person e.g. male or female.
-*
-*/    private String gender;
+    /**
+     * The gender of a Person e.g. male or female.
+     */
+    private String gender;
 
-/**
-*The date when a Contact/Person has retired.
-*
-*/    private Instant dateOfRetirement;
+    /**
+     * The date when a Contact/Person has retired.
+     */
+    private Instant dateOfRetirement;
 
-/**
-*To identify the marital status of a Person.
-*
-*/    private String maritalStatus;
+    /**
+     * To identify the marital status of a Person.
+     */
+    private String maritalStatus;
 
-/**
-*To identify the place of death.
-*
-*/    private Location placeOfDeath;
+    /**
+     * To identify the place of death.
+     */
+    private Location placeOfDeath;
 
-/**
-*The date when a Contact/Person is born.
-*
-*/    private Instant dateOfBirth;
+    /**
+     * The date when a Contact/Person is born.
+     */
+    private Instant dateOfBirth;
 
-/**
-*The age in years of a Contact/Person.
-*
-*/    private int age;
+    /**
+     * The age in years of a Contact/Person.
+     */
+    private int age;
 
-/**
-*The country where a person is born.
-*
-*/    private CountryCode countryOfBirth;
+    /**
+     * The country where a person is born.
+     */
+    private CountryCode countryOfBirth;
 
-/**
-*To provide an private web homepage of an Agent (Contact/Person).
-        
-*
-*/    private URI privateHomepage;
+    /**
+     * To provide an private web homepage of an Agent (Contact/Person).
+     */
+    private URI privateHomepage;
 
-/**
-*To provide the private email address of an Agent (Contact/Person)
-        
-*
-*/    private String privateEmailAddress;
+    /**
+     * To provide the private email address of an Agent (Contact/Person)
+     */
+    private String privateEmailAddress;
 
-/**
-*To provide information on the education.
-*
-*/    private String education;
+    /**
+     * To provide information on the education.
+     */
+    private String education;
 
-/**
-*To identify the key personal events of a Person.
-*
-*/    private KeyPersonalEvent keyPersonalEvent;
+    /**
+     * To identify the key personal events of a Person.
+     */
+    private KeyPersonalEvent keyPersonalEvent;
 }

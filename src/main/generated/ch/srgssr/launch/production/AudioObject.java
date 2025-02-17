@@ -7,12 +7,10 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*a MediaResource in the form of an object in reference to the Audio Definition
-            Model (ADM)
-        
-*
-*
-*/@Accessors(chain = true)
+ * a MediaResource in the form of an object in reference to the Audio Definition
+ * Model (ADM)
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

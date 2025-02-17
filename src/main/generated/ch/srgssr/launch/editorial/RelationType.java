@@ -2,8 +2,7 @@
 package ch.srgssr.launch.editorial;
 
 /**
-*To specify a type of relation.
-*
-*
-*/public enum RelationType {
+ * To specify a type of relation.
+ */
+public enum RelationType {
 }

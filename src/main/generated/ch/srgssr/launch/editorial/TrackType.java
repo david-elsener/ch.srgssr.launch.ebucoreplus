@@ -2,8 +2,7 @@
 package ch.srgssr.launch.editorial;
 
 /**
-*To define a type of track.
-*
-*
-*/public enum TrackType {
+ * To define a type of track.
+ */
+public enum TrackType {
 }

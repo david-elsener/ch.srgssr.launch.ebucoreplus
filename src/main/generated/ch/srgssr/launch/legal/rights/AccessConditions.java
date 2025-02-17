@@ -6,16 +6,22 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import lombok.experimental.Accessors;
 
-/** The conditions under which content can be accessed. */
+/**
+ * The conditions under which content can be accessed.
+ */
 @Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class AccessConditions extends Rights {
 
-  /** checking a users IP-address against a whitelist */
-  private Object geoBlockingWhitelist;
+    /**
+     * checking a users IP-address against a whitelist
+     */
+    private Object geoBlockingWhitelist;
 
-  /** checking a users IP-address against a blacklist */
-  private Object geoBlockingBlacklist;
+    /**
+     * checking a users IP-address against a blacklist
+     */
+    private Object geoBlockingBlacklist;
 }

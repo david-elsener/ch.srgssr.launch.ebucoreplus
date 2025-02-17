@@ -7,13 +7,11 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*A file format for Resources other than audiovisual resources. The format is
-            defined as free text or pointing at a term in a classification scheme e.g.
-            http://www.ebu.ch/metadata/ontologies/skos/ebu_FileFormatCS.rdf.
-        
-*
-*
-*/@Accessors(chain = true)
+ * A file format for Resources other than audiovisual resources. The format is
+ * defined as free text or pointing at a term in a classification scheme e.g.
+ * http://www.ebu.ch/metadata/ontologies/skos/ebu_FileFormatCS.rdf.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

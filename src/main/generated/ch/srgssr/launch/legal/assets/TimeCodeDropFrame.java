@@ -7,17 +7,16 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*null
-*
-*
-*/@Accessors(chain = true)
+ * null
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class TimeCodeDropFrame extends TimelinePoint {
 
-/**
-*A time expressed as timecode.
-*
-*/    private String timecodeExpression;
+    /**
+     * A time expressed as timecode.
+     */
+    private String timecodeExpression;
 }

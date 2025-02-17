@@ -7,41 +7,41 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*a sub-group of episodes of a serial or a series, usually grouped due to a common
-            time frame for production
-        
-*
-*<pre>
-Examples:
-*- the 216 episodes of 2018 of BBC series "EastEnder"
-            - season 1 with 8 episodes of German serial "Babylon Berlin"
-        
-</pre>
-*/@Accessors(chain = true)
+ * a sub-group of episodes of a serial or a series, usually grouped due to a common
+ * time frame for production
+ *
+ *
+ * <pre>
+ * Examples:
+ * - the 216 episodes of 2018 of BBC series "EastEnder"
+ * - season 1 with 8 episodes of German serial "Babylon Berlin"
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class Season extends EditorialGroup {
 
-/**
-*To identify Episodes in a Series
-*
-*/    private Programme episode;
+    /**
+     * To identify Episodes in a Series
+     */
+    private Programme episode;
 
-/**
-*To provide a Season number.
-*
-*/    private int seasonNumber;
+    /**
+     * To provide a Season number.
+     */
+    private int seasonNumber;
 
-/**
-*a EditorialGroup telling a whole story in parts, each continuing the preceding
-            part
-        
-*
-*/    private Serial serial;
+    /**
+     * a EditorialGroup telling a whole story in parts, each continuing the preceding
+     * part
+     */
+    private Serial serial;
 
-/**
-*To assoicate a Season with a Series.
-*
-*/    private Series isSeasonOf;
+    /**
+     * To assoicate a Season with a Series.
+     */
+    private Series isSeasonOf;
 }

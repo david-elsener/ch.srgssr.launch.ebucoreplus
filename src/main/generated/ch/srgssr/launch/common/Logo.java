@@ -7,12 +7,10 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*A Logo allows to visually identify an organisation, publicationService,
-            publicationChannel, or ratings / parentalGuidance
-        
-*
-*
-*/@Accessors(chain = true)
+ * A Logo allows to visually identify an organisation, publicationService,
+ * publicationChannel, or ratings / parentalGuidance
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

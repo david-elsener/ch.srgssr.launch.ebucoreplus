@@ -10,72 +10,70 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*an Agent's participation in the creation or publication of a MediaResource
-        
-*
-*<pre>
-Examples:
-*- authoring a screenplay for a film production
-            - directing a movie
-            - sound engineering of a talk show
-            - creation special effects for a movie
-        
-</pre>
-*/@Accessors(chain = true)
+ * an Agent's participation in the creation or publication of a MediaResource
+ *
+ *
+ * <pre>
+ * Examples:
+ * - authoring a screenplay for a film production
+ * - directing a movie
+ * - sound engineering of a talk show
+ * - creation special effects for a movie
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 public class Involvement {
 
-/**
-*an entity performing an activity in the media business
-*
-*/    private Agent agent;
+    /**
+     * an entity performing an activity in the media business
+     */
+    private Agent agent;
 
-/**
-*An Artefact related to an Agent.
-*
-*/    private Artefact associatedArtefact;
+    /**
+     * An Artefact related to an Agent.
+     */
+    private Artefact associatedArtefact;
 
-/**
-*To identify and Artefact related to EditorialObject or a concept
-        
-*
-*/    private Artefact relatedArtefact;
+    /**
+     * To identify and Artefact related to EditorialObject or a concept
+     */
+    private Artefact relatedArtefact;
 
-/**
-*To identify a ProductionDevice associated to a ProductionJob.
-        
-*
-*/    private ProductionDevice usesProductionDevice;
+    /**
+     * To identify a ProductionDevice associated to a ProductionJob.
+     */
+    private ProductionDevice usesProductionDevice;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*A character played by a person. The relationship implies that the person has
-            intellectual rights to the performance of the character.
-        
-*
-*/    private Character playsCharacter;
+    /**
+     * A character played by a person. The relationship implies that the person has
+     * intellectual rights to the performance of the character.
+     */
+    private Character playsCharacter;
 
-/**
-*The rights appear as a consequence of the engagement.
-*
-*/    private Rights bringsRights;
+    /**
+     * The rights appear as a consequence of the engagement.
+     */
+    private Rights bringsRights;
 
-/**
-*To specify the position of an Agent on Stage.
-*
-*/    private OnStagePosition agentOnStagePosition;
+    /**
+     * To specify the position of an Agent on Stage.
+     */
+    private OnStagePosition agentOnStagePosition;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 }

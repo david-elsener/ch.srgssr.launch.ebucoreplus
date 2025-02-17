@@ -5,12 +5,10 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*A type subject for use in some contexts. This is provided as free text in an
-            annotation label or as an identifier pointing to a term in a classification scheme.
-        
-*
-*
-*/@Accessors(chain = true)
+ * A type subject for use in some contexts. This is provided as free text in an
+ * annotation label or as an identifier pointing to a term in a classification scheme.
+ */
+@Accessors(chain = true)
 @Data
 public class Topic {
 }

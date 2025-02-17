@@ -8,63 +8,61 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*a strategy for coordinated publishing effort towards a target audience
-        
-*
-*<pre>
-Examples:
-*- an advertisement effort for a product, by publishing a set of videos at a time and
-            on a channel, when and where the target audience can be effectively reached
-            - an announcement of the journalistic coverage of an upcoming government election from many different
-            perspectives and for a variety of target audiences published on several channels of linear TV, linear radio,
-            social media, podcast portals, etc.
-        
-</pre>
-*/@Accessors(chain = true)
+ * a strategy for coordinated publishing effort towards a target audience
+ *
+ *
+ * <pre>
+ * Examples:
+ * - an advertisement effort for a product, by publishing a set of videos at a time and
+ * on a channel, when and where the target audience can be effectively reached
+ * - an announcement of the journalistic coverage of an upcoming government election from many different
+ * perspectives and for a variety of target audiences published on several channels of linear TV, linear radio,
+ * social media, podcast portals, etc.
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 public class Campaign {
 
-/**
-*To associate a TargetAudience (e.g. for parental guiddance or targeting a
-            particular social group) with a EditorialObject
-        
-*
-*/    private Audience targetAudience;
+    /**
+     * To associate a TargetAudience (e.g. for parental guiddance or targeting a
+     * particular social group) with a EditorialObject
+     */
+    private Audience targetAudience;
 
-/**
-*A PublicationPlan associated to a Campaign.
-*
-*/    private PublicationPlan publicationPlan;
+    /**
+     * A PublicationPlan associated to a Campaign.
+     */
+    private PublicationPlan publicationPlan;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*The count of and relation to the real audience.
-*
-*/    private Audience consumptionCount;
+    /**
+     * The count of and relation to the real audience.
+     */
+    private Audience consumptionCount;
 
-/**
-*A set of Resonance data used as input to influence the definition of a better
-            targeted Campaign.
-        
-*
-*/    private ResonanceCount inputResonance;
+    /**
+     * A set of Resonance data used as input to influence the definition of a better
+     * targeted Campaign.
+     */
+    private ResonanceCount inputResonance;
 
-/**
-*Specifies the title or name given to the resource. A root for the definition
-            of subproperties defining ebucore titles of different types. The ebucore title type can be used to define
-            sub-properties to optionally refine the category of the title. All value of the EBU title status
-            classification scheme (http://www.ebu.ch/metadata/cs/web/ebu_TitleStatusCodeCS_p.xml.htm) are candidates
-            subproperties of the title property as implemented for an example with alternativeTitle.
-        
-*
-*/    private String title;
+    /**
+     * Specifies the title or name given to the resource. A root for the definition
+     * of subproperties defining ebucore titles of different types. The ebucore title type can be used to define
+     * sub-properties to optionally refine the category of the title. All value of the EBU title status
+     * classification scheme (http://www.ebu.ch/metadata/cs/web/ebu_TitleStatusCodeCS_p.xml.htm) are candidates
+     * subproperties of the title property as implemented for an example with alternativeTitle.
+     */
+    private String title;
 }

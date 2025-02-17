@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To provide a disclaimer of any form.
-*
-*
-*/@Accessors(chain = true)
+ * To provide a disclaimer of any form.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

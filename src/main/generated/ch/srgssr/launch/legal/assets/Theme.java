@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To define a Theme associated with an Asset.
-*
-*
-*/@Accessors(chain = true)
+ * To define a Theme associated with an Asset.
+ */
+@Accessors(chain = true)
 @Data
 public class Theme {
 }

@@ -5,17 +5,15 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*A precise time point of a media resource
-*
-*
-*/@Accessors(chain = true)
+ * A precise time point of a media resource
+ */
+@Accessors(chain = true)
 @Data
 public class TimelinePoint {
 
-/**
-*Notation of time in seconds compares different ways to denote time, like timecode
-            or sample count.
-        
-*
-*/    private double equivalentTime;
+    /**
+     * Notation of time in seconds compares different ways to denote time, like timecode
+     * or sample count.
+     */
+    private double equivalentTime;
 }

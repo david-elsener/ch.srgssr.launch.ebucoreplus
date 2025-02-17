@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To identify a style of Cuisine.
-*
-*
-*/@Accessors(chain = true)
+ * To identify a style of Cuisine.
+ */
+@Accessors(chain = true)
 @Data
 public class CuisineStyle {
 }

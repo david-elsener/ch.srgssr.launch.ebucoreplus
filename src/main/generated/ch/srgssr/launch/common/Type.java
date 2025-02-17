@@ -5,12 +5,10 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*An expression of type in textual form or as a term from a classification
-            scheme.
-        
-*
-*
-*/@Accessors(chain = true)
+ * An expression of type in textual form or as a term from a classification
+ * scheme.
+ */
+@Accessors(chain = true)
 @Data
 public class Type {
 }

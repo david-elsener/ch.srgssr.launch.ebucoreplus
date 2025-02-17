@@ -8,47 +8,47 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*a permit to consume a media service
-*
-*<pre>
-Examples:
-*- a subscription to unlimited streaming from spotify, encompassing 3 devices
-            - a 3 month test subscription to a VoD service
-            - the entitlement to consume free-to-air broadcast services as the resident of a country
-        
-</pre>
-*/@Accessors(chain = true)
+ * a permit to consume a media service
+ *
+ * <pre>
+ * Examples:
+ * - a subscription to unlimited streaming from spotify, encompassing 3 devices
+ * - a 3 month test subscription to a VoD service
+ * - the entitlement to consume free-to-air broadcast services as the resident of a country
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 public class ConsumptionLicence {
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*To identify a device compatible with the ConsumptionLicence.
-        
-*
-*/    private ConsumptionDevice coversConsumptionDevice;
+    /**
+     * To identify a device compatible with the ConsumptionLicence.
+     */
+    private ConsumptionDevice coversConsumptionDevice;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*A link to the terms of a ConsumptionLicence.
-*
-*/    private Contract consumptionLicenceLink;
+    /**
+     * A link to the terms of a ConsumptionLicence.
+     */
+    private Contract consumptionLicenceLink;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*The terms of a ConsumptionLicence.
-*
-*/    private String consumptionLicenceText;
+    /**
+     * The terms of a ConsumptionLicence.
+     */
+    private String consumptionLicenceText;
 }

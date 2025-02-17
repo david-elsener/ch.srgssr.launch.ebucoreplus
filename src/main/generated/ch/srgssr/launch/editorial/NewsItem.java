@@ -9,18 +9,16 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*A NewsItem aggregates all information about a particular news event.
-        
-*
-*
-*/@Accessors(chain = true)
+ * A NewsItem aggregates all information about a particular news event.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class NewsItem extends Item {
 
-/**
-*The dopesheet of a NewsItem.
-*
-*/    private Dopesheet dopesheet;
+    /**
+     * The dopesheet of a NewsItem.
+     */
+    private Dopesheet dopesheet;
 }

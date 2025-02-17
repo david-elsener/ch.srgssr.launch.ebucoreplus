@@ -7,15 +7,16 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*a Component in form of a continuous flow of bits
-*
-*<pre>
-Examples:
-*- an audio stream from an audio on demand service
-            - a video stream from a video on demand service
-        
-</pre>
-*/@Accessors(chain = true)
+ * a Component in form of a continuous flow of bits
+ *
+ * <pre>
+ * Examples:
+ * - an audio stream from an audio on demand service
+ * - a video stream from a video on demand service
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

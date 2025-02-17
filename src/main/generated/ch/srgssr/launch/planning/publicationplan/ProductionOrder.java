@@ -8,32 +8,30 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*The act of ordering the creation/production, purchase or reuse of
-            MediaResources. The terms of a ProductionOrder are defined by Contract.
-        
-*
-*
-*/@Accessors(chain = true)
+ * The act of ordering the creation/production, purchase or reuse of
+ * MediaResources. The terms of a ProductionOrder are defined by Contract.
+ */
+@Accessors(chain = true)
 @Data
 public class ProductionOrder {
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*To identify Contarcts associated witha ProductionOrder.
-*
-*/    private Contract productionContract;
+    /**
+     * To identify Contarcts associated witha ProductionOrder.
+     */
+    private Contract productionContract;
 }

@@ -5,51 +5,49 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To define links and relations.
-*
-*
-*/@Accessors(chain = true)
+ * To define links and relations.
+ */
+@Accessors(chain = true)
 @Data
 public class Relation {
 
-/**
-*To define a link in a Relation.
-*
-*/    private int relationLink;
+    /**
+     * To define a link in a Relation.
+     */
+    private int relationLink;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*To define source of a Relation.
-*
-*/    private Agent relationSource;
+    /**
+     * To define source of a Relation.
+     */
+    private Agent relationSource;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*Total number of group members in a Relation.
-*
-*/    private int relationTotalNumberOfGroupMembers;
+    /**
+     * Total number of group members in a Relation.
+     */
+    private int relationTotalNumberOfGroupMembers;
 
-/**
-*The order number in a list.
-*
-*/    private int relationRunningOrderNumber;
+    /**
+     * The order number in a list.
+     */
+    private int relationRunningOrderNumber;
 
-/**
-*A boolean to define if a Relation is defined within and ordered group.
-        
-*
-*/    private boolean relationOrderedGroupFlag;
+    /**
+     * A boolean to define if a Relation is defined within and ordered group.
+     */
+    private boolean relationOrderedGroupFlag;
 }

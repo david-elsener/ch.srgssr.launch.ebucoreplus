@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To provide a colour code for an animal..
-*
-*
-*/@Accessors(chain = true)
+ * To provide a colour code for an animal..
+ */
+@Accessors(chain = true)
 @Data
 public class AnimalColourCode {
 }

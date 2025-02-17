@@ -2,8 +2,7 @@
 package ch.srgssr.launch.editorial;
 
 /**
-*To specify a type or TimelineTrack.
-*
-*
-*/public enum TimelineTrackType {
+ * To specify a type or TimelineTrack.
+ */
+public enum TimelineTrackType {
 }

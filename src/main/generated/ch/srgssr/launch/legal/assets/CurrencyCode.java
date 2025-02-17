@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To identify a currency by its ISO code.
-*
-*
-*/@Accessors(chain = true)
+ * To identify a currency by its ISO code.
+ */
+@Accessors(chain = true)
 @Data
 public class CurrencyCode {
 }

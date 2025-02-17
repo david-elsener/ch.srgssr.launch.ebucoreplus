@@ -7,25 +7,22 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*An edit unit can be a frame, a sample or a extend of time.
-        
-*
-*
-*/@Accessors(chain = true)
+ * An edit unit can be a frame, a sample or a extend of time.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class EditUnitCount extends TimelinePoint {
 
-/**
-*The edit unit is e.g. the inverse of the audio sample rate or video frame
-            rate.
-        
-*
-*/    private long editUnit;
+    /**
+     * The edit unit is e.g. the inverse of the audio sample rate or video frame
+     * rate.
+     */
+    private long editUnit;
 
-/**
-*Time expressed as the number of editunits or samples.
-*
-*/    private long editUnitNumbering;
+    /**
+     * Time expressed as the number of editunits or samples.
+     */
+    private long editUnitNumbering;
 }

@@ -2,8 +2,7 @@
 package ch.srgssr.launch.editorial;
 
 /**
-*To define a type of artefact.
-*
-*
-*/public enum ArtefactType {
+ * To define a type of artefact.
+ */
+public enum ArtefactType {
 }

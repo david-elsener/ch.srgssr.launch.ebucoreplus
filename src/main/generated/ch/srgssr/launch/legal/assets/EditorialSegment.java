@@ -10,43 +10,42 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*an EditorialObject representing a fraction of an EditorialObject
-        
-*
-*<pre>
-Examples:
-*- a scene in a movie
-            - a section of an interview
-            - an intro of a song
-            - a paragraph of a text
-        
-</pre>
-*/@Accessors(chain = true)
+ * an EditorialObject representing a fraction of an EditorialObject
+ *
+ *
+ * <pre>
+ * Examples:
+ * - a scene in a movie
+ * - a section of an interview
+ * - an intro of a song
+ * - a paragraph of a text
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class EditorialSegment extends EditorialObject {
 
-/**
-*an EditorialObject describing a "work of the mind", a piece.
-*
-*/    private EditorialWork editorialWork;
+    /**
+     * an EditorialObject describing a "work of the mind", a piece.
+     */
+    private EditorialWork editorialWork;
 
-/**
-*The number associated to a sagment as one among many.
-*
-*/    private int segmentNumber;
+    /**
+     * The number associated to a sagment as one among many.
+     */
+    private int segmentNumber;
 
-/**
-*To define a collection / group of media resources, for example a series made
-            of episodes.
-        
-*
-*/    private EditorialGroup editorialGroup;
+    /**
+     * To define a collection / group of media resources, for example a series made
+     * of episodes.
+     */
+    private EditorialGroup editorialGroup;
 
-/**
-*To identify the editorial object to which belongs a part.
-        
-*
-*/    private EditorialObject isPartOf;
+    /**
+     * To identify the editorial object to which belongs a part.
+     */
+    private EditorialObject isPartOf;
 }

@@ -7,15 +7,16 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*a EditorialGroup telling a whole story in parts, each continuing the preceding
-            part
-        
-*
-*<pre>
-Examples:
-*- German serial "Babylon Berlin" with several seasons
-</pre>
-*/@Accessors(chain = true)
+ * a EditorialGroup telling a whole story in parts, each continuing the preceding
+ * part
+ *
+ *
+ * <pre>
+ * Examples:
+ * - German serial "Babylon Berlin" with several seasons
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

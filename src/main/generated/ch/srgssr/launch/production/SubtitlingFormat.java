@@ -7,13 +7,11 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To define the format of subtitling. subtitling's main use isfor translation.
-            This is provided as free text in an annotation label or as an identifier pointing to a term in a
-            classification scheme.
-        
-*
-*
-*/@Accessors(chain = true)
+ * To define the format of subtitling. subtitling's main use isfor translation.
+ * This is provided as free text in an annotation label or as an identifier pointing to a term in a
+ * classification scheme.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

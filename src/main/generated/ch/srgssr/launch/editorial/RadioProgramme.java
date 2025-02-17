@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*A programme for distribution on radio channels.
-*
-*
-*/@Accessors(chain = true)
+ * A programme for distribution on radio channels.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

@@ -5,46 +5,44 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*A class to log Actions.
-*
-*
-*/@Accessors(chain = true)
+ * A class to log Actions.
+ */
+@Accessors(chain = true)
 @Data
 public class Action {
 
-/**
-*To associate a concept with an Agent (e.g. Person or Character).
-        
-*
-*/    private Agent relatedAgent;
+    /**
+     * To associate a concept with an Agent (e.g. Person or Character).
+     */
+    private Agent relatedAgent;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*A precise time point of a media resource
-*
-*/    private TimelinePoint end;
+    /**
+     * A precise time point of a media resource
+     */
+    private TimelinePoint end;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*A precise time point of a media resource
-*
-*/    private TimelinePoint start;
+    /**
+     * A precise time point of a media resource
+     */
+    private TimelinePoint start;
 
-/**
-*To associate a concept with a Scene
-*
-*/    private Scene relatedScene;
+    /**
+     * To associate a concept with a Scene
+     */
+    private Scene relatedScene;
 }

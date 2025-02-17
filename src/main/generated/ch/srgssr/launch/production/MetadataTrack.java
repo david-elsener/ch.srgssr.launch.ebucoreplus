@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*A Track on which metadata is embedded (e.g. MXF).
-*
-*
-*/@Accessors(chain = true)
+ * A Track on which metadata is embedded (e.g. MXF).
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

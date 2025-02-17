@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To define a type of location.
-*
-*
-*/@Accessors(chain = true)
+ * To define a type of location.
+ */
+@Accessors(chain = true)
 @Data
 public class LocationType {
 }

@@ -11,40 +11,37 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*E.g. a fictitious contact / person.
-*
-*
-*/@Accessors(chain = true)
+ * E.g. a fictitious contact / person.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class Character extends Person {
 
-/**
-*To identify a Contact/Person being fictitious.
-*
-*/    private Person isFictitiousPerson;
+    /**
+     * To identify a Contact/Person being fictitious.
+     */
+    private Person isFictitiousPerson;
 
-/**
-*Character depicted by an Artifact
-*
-*/    private Artefact isEmbodiedBy;
+    /**
+     * Character depicted by an Artifact
+     */
+    private Artefact isEmbodiedBy;
 
-/**
-*Relationship between a fictional character and the actor playing the part.
-        
-*
-*/    private Agent isPlayedBy;
+    /**
+     * Relationship between a fictional character and the actor playing the part.
+     */
+    private Agent isPlayedBy;
 
-/**
-*Relationship between a fictional character and the animal that is depicted in
-            the scene.
-        
-*
-*/    private Animal isPortrayedBy;
+    /**
+     * Relationship between a fictional character and the animal that is depicted in
+     * the scene.
+     */
+    private Animal isPortrayedBy;
 
-/**
-*Character, animated by a persion using an artifact
-*
-*/    private Person isAnimatedBy;
+    /**
+     * Character, animated by a persion using an artifact
+     */
+    private Person isAnimatedBy;
 }

@@ -9,16 +9,17 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*a group of EditorialObjects to advertise a product, a service, an event ...
-        
-*
-*<pre>
-Examples:
-*- a set of different ads for one product
-            - a set of different trailers for a film
-        
-</pre>
-*/@Accessors(chain = true)
+ * a group of EditorialObjects to advertise a product, a service, an event ...
+ *
+ *
+ * <pre>
+ * Examples:
+ * - a set of different ads for one product
+ * - a set of different trailers for a film
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

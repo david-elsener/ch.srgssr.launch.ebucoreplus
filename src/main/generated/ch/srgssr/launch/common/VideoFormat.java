@@ -8,7 +8,9 @@ import lombok.EqualsAndHashCode;
 import lombok.ToString;
 import lombok.experimental.Accessors;
 
-/** To specify the format used for video. */
+/**
+ * To specify the format used for video.
+ */
 @Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)

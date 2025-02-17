@@ -7,25 +7,25 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*an EditiorialWork that serves as an optional addition to a main EditorialWork and
-            intends to explain, entertain, advertise or similar.
-        
-*
-*<pre>
-Examples:
-*Extra content for a movie: trailer, making of, bonus material, outtakes, ...
-        
-</pre>
-*/@Accessors(chain = true)
+ * an EditiorialWork that serves as an optional addition to a main EditorialWork and
+ * intends to explain, entertain, advertise or similar.
+ *
+ *
+ * <pre>
+ * Examples:
+ * Extra content for a movie: trailer, making of, bonus material, outtakes, ...
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class EditorialExtra extends EditorialWork {
 
-/**
-*an EditorialWork as a stand-alone piece or an episode of a Serial or Series,
-            intended to be consumed as a whole
-        
-*
-*/    private Programme programme;
+    /**
+     * an EditorialWork as a stand-alone piece or an episode of a Serial or Series,
+     * intended to be consumed as a whole
+     */
+    private Programme programme;
 }

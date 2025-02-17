@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To define a type of contract.
-*
-*
-*/@Accessors(chain = true)
+ * To define a type of contract.
+ */
+@Accessors(chain = true)
 @Data
 public class ContractType {
 }

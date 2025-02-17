@@ -9,25 +9,23 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To signal the presence of Signing for hard of hearing users. The type of
-            Signing (e.g. incursted in or else) or language of Signing can be specified using the appropriate
-            properties.
-        
-*
-*
-*/@Accessors(chain = true)
+ * To signal the presence of Signing for hard of hearing users. The type of
+ * Signing (e.g. incursted in or else) or language of Signing can be specified using the appropriate
+ * properties.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class Signing extends VideoTrack {
 
-/**
-*To specify the format used for signing.
-*
-*/    private SigningFormat signingFormat;
+    /**
+     * To specify the format used for signing.
+     */
+    private SigningFormat signingFormat;
 
-/**
-*To specify the source of signing.
-*
-*/    private Agent signingSource;
+    /**
+     * To specify the source of signing.
+     */
+    private Agent signingSource;
 }

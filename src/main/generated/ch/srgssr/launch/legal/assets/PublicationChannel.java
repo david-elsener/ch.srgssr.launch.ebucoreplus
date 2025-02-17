@@ -10,103 +10,98 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*a connection to exchange content between provider and consumer operated on a
-            PublicationPlatform
-        
-*
-*<pre>
-Examples:
-*- the DVB-S channel at 10714 MHz H on the Astra 2E satellite for the linear video
-            service "BBC One HD"
-            - the DVB-T channel E23 in London/Chrystal Palace for the linear video service "BBC One London"
-            - the live video stream "BBC One" within the BBC iPlayer
-            - the channel @bbcradio1 on youtube for the on demand video service "BBC Radio 1 visual radio"
-            - the channel @elonmusk on twitter for a social text service "Elon Musk's Tweets"
-        
-</pre>
-*/@Accessors(chain = true)
+ * a connection to exchange content between provider and consumer operated on a
+ * PublicationPlatform
+ *
+ *
+ * <pre>
+ * Examples:
+ * - the DVB-S channel at 10714 MHz H on the Astra 2E satellite for the linear video
+ * service "BBC One HD"
+ * - the DVB-T channel E23 in London/Chrystal Palace for the linear video service "BBC One London"
+ * - the live video stream "BBC One" within the BBC iPlayer
+ * - the channel @bbcradio1 on youtube for the on demand video service "BBC Radio 1 visual radio"
+ * - the channel @elonmusk on twitter for a social text service "Elon Musk's Tweets"
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 public class PublicationChannel {
 
-/**
-*To identify the Agent (Contact/person or Organisation) who owns a Service
-            operating a PublicationChannel.
-        
-*
-*/    private Agent isOwnedBy;
+    /**
+     * To identify the Agent (Contact/person or Organisation) who owns a Service
+     * operating a PublicationChannel.
+     */
+    private Agent isOwnedBy;
 
-/**
-*To associate a TargetAudience (e.g. for parental guiddance or targeting a
-            particular social group) with a EditorialObject
-        
-*
-*/    private Audience targetAudience;
+    /**
+     * To associate a TargetAudience (e.g. for parental guiddance or targeting a
+     * particular social group) with a EditorialObject
+     */
+    private Audience targetAudience;
 
-/**
-*To identify a Publication Channel
-*
-*/    private PublicationChannel relatedPublicationChannel;
+    /**
+     * To identify a Publication Channel
+     */
+    private PublicationChannel relatedPublicationChannel;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*The count of and relation to the real audience.
-*
-*/    private Audience consumptionCount;
+    /**
+     * The count of and relation to the real audience.
+     */
+    private Audience consumptionCount;
 
-/**
-*A Consumer Account for a particular Service.
-*
-*/    private Account accountingTo;
+    /**
+     * A Consumer Account for a particular Service.
+     */
+    private Account accountingTo;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To identify the PublicationEvents available through a Service.
-        
-*
-*/    private PublicationEvent offers;
+    /**
+     * To identify the PublicationEvents available through a Service.
+     */
+    private PublicationEvent offers;
 
-/**
-*Logos can be used in a variety of contexts. Logo can be associated with an
-            Organisation or a Service or a PublicationChannel.
-        
-*
-*/    private Logo logo;
+    /**
+     * Logos can be used in a variety of contexts. Logo can be associated with an
+     * Organisation or a Service or a PublicationChannel.
+     */
+    private Logo logo;
 
-/**
-*A point of time or start of an interval
-*
-*/    private Instant startDateTime;
+    /**
+     * A point of time or start of an interval
+     */
+    private Instant startDateTime;
 
-/**
-*Describing an end of an interval
-*
-*/    private Instant endDateTime;
+    /**
+     * Describing an end of an interval
+     */
+    private Instant endDateTime;
 
-/**
-*a service by which a publishing organisation or person publishes its content and
-            offers access to consumers
-        
-*
-*/    private PublicationService transports;
+    /**
+     * a service by which a publishing organisation or person publishes its content and
+     * offers access to consumers
+     */
+    private PublicationService transports;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
     private AlternativeTitle alternativeTitle;
 
-/**
-*To identify the Service that operates the PublicationChannel.
-        
-*
-*/    private PublicationService isOperatedBy;
+    /**
+     * To identify the Service that operates the PublicationChannel.
+     */
+    private PublicationService isOperatedBy;
 }

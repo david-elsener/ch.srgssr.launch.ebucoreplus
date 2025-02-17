@@ -5,36 +5,34 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To define a timed sequence of EditorialObjects.
-*
-*
-*/@Accessors(chain = true)
+ * To define a timed sequence of EditorialObjects.
+ */
+@Accessors(chain = true)
 @Data
 public class TimelineTrack {
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*A precise time point of a media resource
-*
-*/    private TimelinePoint duration;
+    /**
+     * A precise time point of a media resource
+     */
+    private TimelinePoint duration;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To associate an EditorialObject to a TimelineTrack as an TimelineTrackpart
-        
-*
-*/    private EditorialObject timelineTrackPart;
+    /**
+     * To associate an EditorialObject to a TimelineTrack as an TimelineTrackpart
+     */
+    private EditorialObject timelineTrackPart;
 }

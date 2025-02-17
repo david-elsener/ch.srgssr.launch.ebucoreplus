@@ -17,124 +17,116 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*a task or set of tasks to create, modify, manipulate, store, etc a
-            MediaResource
-        
-*
-*<pre>
-Examples:
-*- a live show production for broadcasting
-            - filming and editing a news clip
-            - an outsourced production of a complete movie
-        
-</pre>
-*/@Accessors(chain = true)
+ * a task or set of tasks to create, modify, manipulate, store, etc a
+ * MediaResource
+ *
+ *
+ * <pre>
+ * Examples:
+ * - a live show production for broadcasting
+ * - filming and editing a news clip
+ * - an outsourced production of a complete movie
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 public class ProductionJob {
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To identify a Resource used as an input to a ProductionJob / process.
-        
-*
-*/    private Resource inputResource;
+    /**
+     * To identify a Resource used as an input to a ProductionJob / process.
+     */
+    private Resource inputResource;
 
-/**
-*To identify a MediaResource used as an input to a ProductionJob / process.
-        
-*
-*/    private MediaResource inputMediaResource;
+    /**
+     * To identify a MediaResource used as an input to a ProductionJob / process.
+     */
+    private MediaResource inputMediaResource;
 
-/**
-*The Contract through which an ProductionJob is ordered.
-*
-*/    private Contract isOrderedBy;
+    /**
+     * The Contract through which an ProductionJob is ordered.
+     */
+    private Contract isOrderedBy;
 
-/**
-*To define a Location where a ProductionJob has taken or is scheduled to take
-            place.
-        
-*
-*/    private Location productionJobLocation;
+    /**
+     * To define a Location where a ProductionJob has taken or is scheduled to take
+     * place.
+     */
+    private Location productionJobLocation;
 
-/**
-*To identify a ProductionDevice associated to a ProductionJob.
-        
-*
-*/    private ProductionDevice usesProductionDevice;
+    /**
+     * To identify a ProductionDevice associated to a ProductionJob.
+     */
+    private ProductionDevice usesProductionDevice;
 
-/**
-*A point of time or start of an interval
-*
-*/    private Instant startDateTime;
+    /**
+     * A point of time or start of an interval
+     */
+    private Instant startDateTime;
 
-/**
-*To identify a contributor to a Resource, a EditorialObject, an Event...
-        
-*
-*/    private Involvement contributor;
+    /**
+     * To identify a contributor to a Resource, a EditorialObject, an Event...
+     */
+    private Involvement contributor;
 
-/**
-*To identify a ProductionJob / process as part of a complex ProductionJob.
-        
-*
-*/    private ProductionJob subJob;
+    /**
+     * To identify a ProductionJob / process as part of a complex ProductionJob.
+     */
+    private ProductionJob subJob;
 
-/**
-*To define an Event associated to a ProductionJob.
-*
-*/    private Event productionJobEvent;
+    /**
+     * To define an Event associated to a ProductionJob.
+     */
+    private Event productionJobEvent;
 
-/**
-*Used where a production job, e.g. a face recognition service, yields
-            information that can be described using the EditorialObject class.
-        
-*
-*/    private EditorialObject createsMetadata;
+    /**
+     * Used where a production job, e.g. a face recognition service, yields
+     * information that can be described using the EditorialObject class.
+     */
+    private EditorialObject createsMetadata;
 
-/**
-*Describing an end of an interval
-*
-*/    private Instant endDateTime;
+    /**
+     * Describing an end of an interval
+     */
+    private Instant endDateTime;
 
-/**
-*To identify Essence resulting from a ProductionJob.
-*
-*/    private Essence outputEssence;
+    /**
+     * To identify Essence resulting from a ProductionJob.
+     */
+    private Essence outputEssence;
 
-/**
-*To identify a previous associated ProductionJob
-*
-*/    private ProductionJob previousRelatedProductionJob;
+    /**
+     * To identify a previous associated ProductionJob
+     */
+    private ProductionJob previousRelatedProductionJob;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*To identify a MediaResource resulting from a ProductionJob.
-        
-*
-*/    private MediaResource outputMediaResource;
+    /**
+     * To identify a MediaResource resulting from a ProductionJob.
+     */
+    private MediaResource outputMediaResource;
 
-/**
-*To identify the EditorialObject a ProductionJob relates to.
-        
-*
-*/    private EditorialObject basedOn;
+    /**
+     * To identify the EditorialObject a ProductionJob relates to.
+     */
+    private EditorialObject basedOn;
 
-/**
-*To identify a Resource resulting from a ProductionJob.
-*
-*/    private Resource outputResource;
+    /**
+     * To identify a Resource resulting from a ProductionJob.
+     */
+    private Resource outputResource;
 }

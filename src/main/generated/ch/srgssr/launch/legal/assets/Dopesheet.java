@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*a Document containing additional information about a news item.
-*
-*
-*/@Accessors(chain = true)
+ * a Document containing additional information about a news item.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

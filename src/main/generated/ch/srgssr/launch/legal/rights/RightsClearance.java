@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To signal that rights have been cleared (or not)
-*
-*
-*/@Accessors(chain = true)
+ * To signal that rights have been cleared (or not)
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

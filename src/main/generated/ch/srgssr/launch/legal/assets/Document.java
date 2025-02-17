@@ -10,33 +10,34 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*a Resource in the form of encoded text and/or graphics
-*
-*<pre>
-Examples:
-*- a text file
-            - a paper book
-            - a web page or a reusable block thereof
-        
-</pre>
-*/@Accessors(chain = true)
+ * a Resource in the form of encoded text and/or graphics
+ *
+ * <pre>
+ * Examples:
+ * - a text file
+ * - a paper book
+ * - a web page or a reusable block thereof
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class Document extends Resource {
 
-/**
-*To describe any encoding format use to produce content.
-*
-*/    private EncodingFormat encodingFormat;
+    /**
+     * To describe any encoding format use to produce content.
+     */
+    private EncodingFormat encodingFormat;
 
-/**
-*To describe the format of a Document.
-*
-*/    private DocumentFormat documentFormat;
+    /**
+     * To describe the format of a Document.
+     */
+    private DocumentFormat documentFormat;
 
-/**
-*The number of words contained in a document.
-*
-*/    private int wordCount;
+    /**
+     * The number of words contained in a document.
+     */
+    private int wordCount;
 }

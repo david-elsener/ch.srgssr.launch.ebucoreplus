@@ -12,90 +12,88 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*a schedule for one or many PublicationEvents to adress a target audience, or a
-            hierarchy of PublicationPlans
-        
-*
-*<pre>
-Examples:
-*- the planned date, time and channel for the publication of a movie
-            - the planned dates, times and channels for the publication of the episodes of a serial
-            - the planned schedule for a channel during one day
-            - the planned dates, times and channels for a collection of content about a common theme
-        
-</pre>
-*/@Accessors(chain = true)
+ * a schedule for one or many PublicationEvents to adress a target audience, or a
+ * hierarchy of PublicationPlans
+ *
+ *
+ * <pre>
+ * Examples:
+ * - the planned date, time and channel for the publication of a movie
+ * - the planned dates, times and channels for the publication of the episodes of a serial
+ * - the planned schedule for a channel during one day
+ * - the planned dates, times and channels for a collection of content about a common theme
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 public class PublicationPlan {
 
-/**
-*To identify the Assets related to a PublicationPlan.
-*
-*/    private Asset asset;
+    /**
+     * To identify the Assets related to a PublicationPlan.
+     */
+    private Asset asset;
 
-/**
-*To identify a parent Publication Plan
-*
-*/    private PublicationPlan isMemberOfPublicationPlan;
+    /**
+     * To identify a parent Publication Plan
+     */
+    private PublicationPlan isMemberOfPublicationPlan;
 
-/**
-*To identify the Contracts associated with a PublicationPlan.
-        
-*
-*/    private Contract businessContract;
+    /**
+     * To identify the Contracts associated with a PublicationPlan.
+     */
+    private Contract businessContract;
 
-/**
-*To identify the productionOrders associated with PublicationPan.
-        
-*
-*/    private ProductionOrder associatedProductionOrder;
+    /**
+     * To identify the productionOrders associated with PublicationPan.
+     */
+    private ProductionOrder associatedProductionOrder;
 
-/**
-*A point of time or start of an interval
-*
-*/    private Instant startDateTime;
+    /**
+     * A point of time or start of an interval
+     */
+    private Instant startDateTime;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To associate PublicationEvents with PublicationChannels or as elements of a
-            PublicationHistory or PublicationPlanning.
-        
-*
-*/    private PublicationEvent publicationEvent;
+    /**
+     * To associate PublicationEvents with PublicationChannels or as elements of a
+     * PublicationHistory or PublicationPlanning.
+     */
+    private PublicationEvent publicationEvent;
 
     private String publicationPlanTitle;
 
-/**
-*To identify Agents associated with a PublicationPan.
-*
-*/    private Agent stakeholder;
+    /**
+     * To identify Agents associated with a PublicationPan.
+     */
+    private Agent stakeholder;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*To identify a subplan of a publication plan.
-*
-*/    private PublicationPlan publicationPlanMember;
+    /**
+     * To identify a subplan of a publication plan.
+     */
+    private PublicationPlan publicationPlanMember;
 
-/**
-*Describing an end of an interval
-*
-*/    private Instant endDateTime;
+    /**
+     * Describing an end of an interval
+     */
+    private Instant endDateTime;
 
-/**
-*To provide a status regarding the PublicationPlan.
-*
-*/    private Object publicationPlanStatus;
+    /**
+     * To provide a status regarding the PublicationPlan.
+     */
+    private Object publicationPlanStatus;
 }

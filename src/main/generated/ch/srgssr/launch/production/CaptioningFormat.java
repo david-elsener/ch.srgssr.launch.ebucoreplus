@@ -7,13 +7,11 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To define the format of captioning. Captioning's main use isfor hard of
-            hearing transcription. This is provided as free text in an annotation label or as an identifier pointing to
-            a term in a classification scheme.
-        
-*
-*
-*/@Accessors(chain = true)
+ * To define the format of captioning. Captioning's main use isfor hard of
+ * hearing transcription. This is provided as free text in an annotation label or as an identifier pointing to
+ * a term in a classification scheme.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

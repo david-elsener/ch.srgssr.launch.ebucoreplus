@@ -10,55 +10,55 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*an Agent in the form of an administrative and functional structure participating
-            in media related activities
-        
-*
-*<pre>
-Examples:
-*- PSM organisations
-            - EBU
-            - collecting society
-            - film studios
-            - cinemas
-            - authors' union
-        
-</pre>
-*/@Accessors(chain = true)
+ * an Agent in the form of an administrative and functional structure participating
+ * in media related activities
+ *
+ *
+ * <pre>
+ * Examples:
+ * - PSM organisations
+ * - EBU
+ * - collecting society
+ * - film studios
+ * - cinemas
+ * - authors' union
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class Organisation extends Agent {
 
-/**
-*Logos can be used in a variety of contexts. Logo can be associated with an
-            Organisation or a Service or a PublicationChannel.
-        
-*
-*/    private Logo logo;
+    /**
+     * Logos can be used in a variety of contexts. Logo can be associated with an
+     * Organisation or a Service or a PublicationChannel.
+     */
+    private Logo logo;
 
-/**
-*To identify members of staff in an organisation.
-*
-*/    private StaffMember staffMember;
+    /**
+     * To identify members of staff in an organisation.
+     */
+    private StaffMember staffMember;
 
-/**
-*Describing an end of an interval
-*
-*/    private Instant endDateTime;
+    /**
+     * Describing an end of an interval
+     */
+    private Instant endDateTime;
 
-/**
-*To identify Staff members in an Organisation.
-*
-*/    private StaffMember organisationStaff;
+    /**
+     * To identify Staff members in an Organisation.
+     */
+    private StaffMember organisationStaff;
 
-/**
-*To identify a department in an organisation.
-*
-*/    private Department department;
+    /**
+     * To identify a department in an organisation.
+     */
+    private Department department;
 
-/**
-*A point of time or start of an interval
-*
-*/    private Instant startDateTime;
+    /**
+     * A point of time or start of an interval
+     */
+    private Instant startDateTime;
 }

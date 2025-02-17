@@ -7,70 +7,69 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*a segment of the potential consumers of media services distinguished by criteria
-            that shape their consumption behaviour, like age, education, sex, social status, residence, attitudes, etc
-        
-*
-*<pre>
-Examples:
-*- age 14 to 29
-            - rural youth
-            - males over 70
-            - culture oriented people
-            - fun oriented people
-            - school kid's parents
-            - low educated males under 25
-            - young progressive people
-        
-</pre>
-*/@Accessors(chain = true)
+ * a segment of the potential consumers of media services distinguished by criteria
+ * that shape their consumption behaviour, like age, education, sex, social status, residence, attitudes, etc
+ *
+ *
+ * <pre>
+ * Examples:
+ * - age 14 to 29
+ * - rural youth
+ * - males over 70
+ * - culture oriented people
+ * - fun oriented people
+ * - school kid's parents
+ * - low educated males under 25
+ * - young progressive people
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 public class Audience {
 
-/**
-*A defined audience group that is excluded from the audience
-        
-*
-*/    private Audience excludesAudience;
+    /**
+     * A defined audience group that is excluded from the audience
+     */
+    private Audience excludesAudience;
 
-/**
-*The maximum age of an Audience.
-*
-*/    private int audienceAgeHigh;
+    /**
+     * The maximum age of an Audience.
+     */
+    private int audienceAgeHigh;
 
-/**
-*The Audience reach in numbers or percent.
-*
-*/    private String audienceCount;
+    /**
+     * The Audience reach in numbers or percent.
+     */
+    private String audienceCount;
 
-/**
-*The minimum age of an Audience.
-*
-*/    private int audienceAgeLow;
+    /**
+     * The minimum age of an Audience.
+     */
+    private int audienceAgeLow;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*The points of interest of an Audience.
-*
-*/    private String audienceInterest;
+    /**
+     * The points of interest of an Audience.
+     */
+    private String audienceInterest;
 
-/**
-*A defined audience group that is included in the audience
-        
-*
-*/    private Audience includesAudience;
+    /**
+     * A defined audience group that is included in the audience
+     */
+    private Audience includesAudience;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 }

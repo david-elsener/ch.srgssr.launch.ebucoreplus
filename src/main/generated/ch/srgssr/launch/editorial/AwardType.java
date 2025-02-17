@@ -2,8 +2,7 @@
 package ch.srgssr.launch.editorial;
 
 /**
-*To define a type of Award.
-*
-*
-*/public enum AwardType {
+ * To define a type of Award.
+ */
+public enum AwardType {
 }

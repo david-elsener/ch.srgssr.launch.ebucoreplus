@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To define the purpose of an AudioChannel.
-*
-*
-*/@Accessors(chain = true)
+ * To define the purpose of an AudioChannel.
+ */
+@Accessors(chain = true)
 @Data
 public class AudioChannelPurpose {
 }

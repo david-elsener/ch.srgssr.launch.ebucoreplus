@@ -7,11 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*identifies the technical video standard of a resource, i.e. NTSC or PAL.
-        
-*
-*
-*/@Accessors(chain = true)
+ * identifies the technical video standard of a resource, i.e. NTSC or PAL.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

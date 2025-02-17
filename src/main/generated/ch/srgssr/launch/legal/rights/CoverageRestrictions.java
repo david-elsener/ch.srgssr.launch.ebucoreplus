@@ -7,12 +7,10 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To provide information on possible restrictions regarding the temporal and
-            spatial coverage for publication.
-        
-*
-*
-*/@Accessors(chain = true)
+ * To provide information on possible restrictions regarding the temporal and
+ * spatial coverage for publication.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

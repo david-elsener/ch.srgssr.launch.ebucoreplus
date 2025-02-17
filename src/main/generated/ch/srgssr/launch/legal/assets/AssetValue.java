@@ -5,36 +5,34 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To describe the value associated with an Asset.
-*
-*
-*/@Accessors(chain = true)
+ * To describe the value associated with an Asset.
+ */
+@Accessors(chain = true)
 @Data
 public class AssetValue {
 
-/**
-*To provide an estimated or actual value of an Asset.
-*
-*/    private double assetValue;
+    /**
+     * To provide an estimated or actual value of an Asset.
+     */
+    private double assetValue;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*To provide the currency in which the assetValue is given.
-        
-*
-*/    private Object assetValueCurrency;
+    /**
+     * To provide the currency in which the assetValue is given.
+     */
+    private Object assetValueCurrency;
 }

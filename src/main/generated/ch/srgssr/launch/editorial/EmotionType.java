@@ -2,8 +2,7 @@
 package ch.srgssr.launch.editorial;
 
 /**
-*To define a type of emotion.
-*
-*
-*/public enum EmotionType {
+ * To define a type of emotion.
+ */
+public enum EmotionType {
 }

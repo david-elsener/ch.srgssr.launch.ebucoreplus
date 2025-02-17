@@ -9,20 +9,18 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*The target audience (target region, target audience category but also
-            parental guidance recommendation) for which the media resource is intended. This is provided as free text in
-            an annotation label or as an identifier pointing to a term in a classification scheme.
-        
-*
-*
-*/@Accessors(chain = true)
+ * The target audience (target region, target audience category but also
+ * parental guidance recommendation) for which the media resource is intended. This is provided as free text in
+ * an annotation label or as an identifier pointing to a term in a classification scheme.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class AudienceLevel extends Rating {
 
-/**
-*To define the system used to provide a TargetAudience.
-*
-*/    private String targetAudienceSystem;
+    /**
+     * To define the system used to provide a TargetAudience.
+     */
+    private String targetAudienceSystem;
 }

@@ -26,3 +26,11 @@ dependencies {
     implementation(libs.owl.api)
     implementation(libs.java.classgenerator)
 }
+
+sourceSets {
+    main {
+        java {
+            srcDirs("src/main/java", "src/main/generated")
+        }
+    }
+}

@@ -9,20 +9,18 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*The audience by which the Resource can be seen according to ratings like MPAA
-            (http://en.wikipedia.org/wiki/Motion_picture_rating_system) or other organisational / national / local
-            standards.
-        
-*
-*
-*/@Accessors(chain = true)
+ * The audience by which the Resource can be seen according to ratings like MPAA
+ * (http://en.wikipedia.org/wiki/Motion_picture_rating_system) or other organisational / national / local
+ * standards.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class AudienceRating extends Rating {
 
-/**
-*To identify the technique used to measure an audience.
-*
-*/    private Object audienceScoreRecordingTechnique;
+    /**
+     * To identify the technique used to measure an audience.
+     */
+    private Object audienceScoreRecordingTechnique;
 }

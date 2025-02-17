@@ -7,40 +7,38 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*an EditorialWork to be incorporated into a Programme, an Article or a Post
-        
-*
-*<pre>
-Examples:
-*- a news item to be incorporated in a news programme
-            - a survey-clip to be incorporated in a debate
-        
-</pre>
-*/@Accessors(chain = true)
+ * an EditorialWork to be incorporated into a Programme, an Article or a Post
+ *
+ *
+ * <pre>
+ * Examples:
+ * - a news item to be incorporated in a news programme
+ * - a survey-clip to be incorporated in a debate
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class Item extends EditorialWork {
 
-/**
-*an EditorialWork consisting of text, graphic, sometimes video or audio, created
-            for publication on web-sites, blogs and other channels similar to the more traditional paper-based
-            publications
-        
-*
-*/    private Article article;
+    /**
+     * an EditorialWork consisting of text, graphic, sometimes video or audio, created
+     * for publication on web-sites, blogs and other channels similar to the more traditional paper-based
+     * publications
+     */
+    private Article article;
 
-/**
-*an EditorialWork consisting of text, graphic, sometimes video or audio, created
-            for publication on social media platforms and alike
-        
-*
-*/    private Post post;
+    /**
+     * an EditorialWork consisting of text, graphic, sometimes video or audio, created
+     * for publication on social media platforms and alike
+     */
+    private Post post;
 
-/**
-*an EditorialWork as a stand-alone piece or an episode of a Serial or Series,
-            intended to be consumed as a whole
-        
-*
-*/    private Programme programme;
+    /**
+     * an EditorialWork as a stand-alone piece or an episode of a Serial or Series,
+     * intended to be consumed as a whole
+     */
+    private Programme programme;
 }

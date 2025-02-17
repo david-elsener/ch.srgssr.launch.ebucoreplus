@@ -2,8 +2,7 @@
 package ch.srgssr.launch.editorial;
 
 /**
-*To define a type of service.
-*
-*
-*/public enum ServiceType {
+ * To define a type of service.
+ */
+public enum ServiceType {
 }

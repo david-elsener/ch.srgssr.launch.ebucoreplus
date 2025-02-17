@@ -2,8 +2,7 @@
 package ch.srgssr.launch.editorial;
 
 /**
-*to define a type of AudioProgramme.
-*
-*
-*/public enum AudioProgrammeType {
+ * to define a type of AudioProgramme.
+ */
+public enum AudioProgrammeType {
 }

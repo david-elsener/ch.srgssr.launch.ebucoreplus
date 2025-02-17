@@ -7,14 +7,15 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*an editorial extra that provides a story about scenes of the EditorialWork
-        
-*
-*<pre>
-Examples:
-*- short film with explanations on the stunt scenes in an action movie
-</pre>
-*/@Accessors(chain = true)
+ * an editorial extra that provides a story about scenes of the EditorialWork
+ *
+ *
+ * <pre>
+ * Examples:
+ * - short film with explanations on the stunt scenes in an action movie
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

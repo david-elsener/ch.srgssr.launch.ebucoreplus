@@ -7,15 +7,16 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*Audio or video recordings (to be) used in editing for a work
-*
-*<pre>
-Examples:
-*- video recordings to create a movie
-            - video recordings to create a news item
-        
-</pre>
-*/@Accessors(chain = true)
+ * Audio or video recordings (to be) used in editing for a work
+ *
+ * <pre>
+ * Examples:
+ * - video recordings to create a movie
+ * - video recordings to create a news item
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

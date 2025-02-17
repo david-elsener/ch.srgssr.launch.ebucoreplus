@@ -9,46 +9,45 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*a tool to facilitate activities in a ProductionJob
-*
-*<pre>
-Examples:
-*- a camera
-            - a microphone
-            - a video or sound mixer
-            - a video or sound editor
-            - spot lights
-            - a LED wall
-        
-</pre>
-*/@Accessors(chain = true)
+ * a tool to facilitate activities in a ProductionJob
+ *
+ * <pre>
+ * Examples:
+ * - a camera
+ * - a microphone
+ * - a video or sound mixer
+ * - a video or sound editor
+ * - spot lights
+ * - a LED wall
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 public class ProductionDevice {
 
-/**
-*The contractual terms under which a ProductionDevice shall be used.
-        
-*
-*/    private Contract usageContract;
+    /**
+     * The contractual terms under which a ProductionDevice shall be used.
+     */
+    private Contract usageContract;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To identify the OnStagePosition of a ProductionDevice on Stage.
-        
-*
-*/    private OnStagePosition productionDeviceOnStagePosition;
+    /**
+     * To identify the OnStagePosition of a ProductionDevice on Stage.
+     */
+    private OnStagePosition productionDeviceOnStagePosition;
 }

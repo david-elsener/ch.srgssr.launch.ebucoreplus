@@ -7,12 +7,10 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*A DepictedEVent is fictitious or historical or other sort of Event that the
-            content of the EditorialObject or resource relates to.
-        
-*
-*
-*/@Accessors(chain = true)
+ * A DepictedEVent is fictitious or historical or other sort of Event that the
+ * content of the EditorialObject or resource relates to.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

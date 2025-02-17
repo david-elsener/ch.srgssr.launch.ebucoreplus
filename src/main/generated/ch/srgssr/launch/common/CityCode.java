@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To allocate a city code.
-*
-*
-*/@Accessors(chain = true)
+ * To allocate a city code.
+ */
+@Accessors(chain = true)
 @Data
 public class CityCode {
 }

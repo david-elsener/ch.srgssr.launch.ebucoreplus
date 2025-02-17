@@ -11,42 +11,39 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*a Person consuming a media service
-*
-*<pre>
-Examples:
-*- a radio listener
-            - a video stream viewer
-        
-</pre>
-*/@Accessors(chain = true)
+ * a Person consuming a media service
+ *
+ * <pre>
+ * Examples:
+ * - a radio listener
+ * - a video stream viewer
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class Consumer extends Person {
 
-/**
-*The parent Audience group to which a Consumer is a member of.
-        
-*
-*/    private Audience belongsToAudience;
+    /**
+     * The parent Audience group to which a Consumer is a member of.
+     */
+    private Audience belongsToAudience;
 
-/**
-*To identify the ConsumptionDevices used by a Consumer. Range: string or
-            ConsumptionDevice
-        
-*
-*/    private ConsumptionDevice usesConsumptionDevice;
+    /**
+     * To identify the ConsumptionDevices used by a Consumer. Range: string or
+     * ConsumptionDevice
+     */
+    private ConsumptionDevice usesConsumptionDevice;
 
-/**
-*To identify ConsumptionEvents associated with a Consumer.
-        
-*
-*/    private ConsumptionEvent associatedConsumptionEvent;
+    /**
+     * To identify ConsumptionEvents associated with a Consumer.
+     */
+    private ConsumptionEvent associatedConsumptionEvent;
 
-/**
-*To provide the Account details of a registered Consumer.
-        
-*
-*/    private Account isRegisteredAs;
+    /**
+     * To provide the Account details of a registered Consumer.
+     */
+    private Account isRegisteredAs;
 }

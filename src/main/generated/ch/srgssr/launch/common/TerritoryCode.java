@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To identify a territory e.g. by its UN code.
-*
-*
-*/@Accessors(chain = true)
+ * To identify a territory e.g. by its UN code.
+ */
+@Accessors(chain = true)
 @Data
 public class TerritoryCode {
 }

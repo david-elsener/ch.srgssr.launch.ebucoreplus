@@ -2,8 +2,7 @@
 package ch.srgssr.launch.publication;
 
 /**
-*To define a type of publication channel.
-*
-*
-*/public enum PublicationChannelType {
+ * To define a type of publication channel.
+ */
+public enum PublicationChannelType {
 }

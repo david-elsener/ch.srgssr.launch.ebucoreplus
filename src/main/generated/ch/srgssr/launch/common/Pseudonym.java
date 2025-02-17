@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*a fictitious name; especially : pen name or stage name
-*
-*
-*/@Accessors(chain = true)
+ * a fictitious name; especially : pen name or stage name
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

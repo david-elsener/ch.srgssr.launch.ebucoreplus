@@ -7,17 +7,18 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*an Editorial Extra with typical promotion lenght of up to 2 minutes, promoting a
-            Programme, a Serial or a Series to be published in the future
-        
-*
-*<pre>
-Examples:
-*- a 1-minute-preview for next Sunday's episode of German Series "Tatort"
-            - a promo-clip for a sports-cup-final later tonight
-        
-</pre>
-*/@Accessors(chain = true)
+ * an Editorial Extra with typical promotion lenght of up to 2 minutes, promoting a
+ * Programme, a Serial or a Series to be published in the future
+ *
+ *
+ * <pre>
+ * Examples:
+ * - a 1-minute-preview for next Sunday's episode of German Series "Tatort"
+ * - a promo-clip for a sports-cup-final later tonight
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

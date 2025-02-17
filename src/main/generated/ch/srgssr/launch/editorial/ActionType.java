@@ -2,8 +2,7 @@
 package ch.srgssr.launch.editorial;
 
 /**
-*To define a type of Action.
-*
-*
-*/public enum ActionType {
+ * To define a type of Action.
+ */
+public enum ActionType {
 }

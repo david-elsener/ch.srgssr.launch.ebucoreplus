@@ -7,19 +7,20 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*an EditorialWork consisting of text, graphic, sometimes video or audio, created
-            for publication on social media platforms and alike
-        
-*
-*<pre>
-Examples:
-*- a tweet on twitter
-            - a post on Facebook
-            - a post on Instagram
-            - a video-post on Youtube
-        
-</pre>
-*/@Accessors(chain = true)
+ * an EditorialWork consisting of text, graphic, sometimes video or audio, created
+ * for publication on social media platforms and alike
+ *
+ *
+ * <pre>
+ * Examples:
+ * - a tweet on twitter
+ * - a post on Facebook
+ * - a post on Instagram
+ * - a video-post on Youtube
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

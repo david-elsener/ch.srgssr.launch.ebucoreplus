@@ -8,122 +8,118 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*a spatial assignment to a media related locatable Thing
-*
-*<pre>
-Examples:
-*- London as a place where BBC produces news shows
-            - London as a place for a screenplay
-            - London as a place for the prime minister's public announcement covered in a BBC news show
-        
-</pre>
-*/@Accessors(chain = true)
+ * a spatial assignment to a media related locatable Thing
+ *
+ * <pre>
+ * Examples:
+ * - London as a place where BBC produces news shows
+ * - London as a place for a screenplay
+ * - London as a place for the prime minister's public announcement covered in a BBC news show
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 public class Location {
 
-/**
-*To specify the name of the gps coordinate system used for the Location.
-        
-*
-*/    private String locationCoordinateSystemName;
+    /**
+     * To specify the name of the gps coordinate system used for the Location.
+     */
+    private String locationCoordinateSystemName;
 
-/**
-*To provide an address postal code.
-*
-*/    private String locationAddressPostalCode;
+    /**
+     * To provide an address postal code.
+     */
+    private String locationAddressPostalCode;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*To provide a description of a particular region assocoated to the Location.
-        
-*
-*/    private RegionCode locationRegion;
+    /**
+     * To provide a description of a particular region assocoated to the Location.
+     */
+    private RegionCode locationRegion;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*To define the altitude of a Location in meters.
-*
-*/    private double locationAltitude;
+    /**
+     * To define the altitude of a Location in meters.
+     */
+    private double locationAltitude;
 
-/**
-*To identify and Artefact related to EditorialObject or a concept
-        
-*
-*/    private Artefact relatedArtefact;
+    /**
+     * To identify and Artefact related to EditorialObject or a concept
+     */
+    private Artefact relatedArtefact;
 
-/**
-*A picture associated with a Location.
-*
-*/    private Picture locationPicture;
+    /**
+     * A picture associated with a Location.
+     */
+    private Picture locationPicture;
 
-/**
-*an event associated with the concept
-*
-*/    private Event relatedEvent;
+    /**
+     * an event associated with the concept
+     */
+    private Event relatedEvent;
 
-/**
-*The name of the street, square or block in a adress
-*
-*/    private String locationAddressStreetName;
+    /**
+     * The name of the street, square or block in a adress
+     */
+    private String locationAddressStreetName;
 
-/**
-*The number identifying an apartment in a house.
-*
-*/    private String locationAddressAppartmentNumber;
+    /**
+     * The number identifying an apartment in a house.
+     */
+    private String locationAddressAppartmentNumber;
 
-/**
-*To give the code of a Location.
-*
-*/    private LocationCode locationCode;
+    /**
+     * To give the code of a Location.
+     */
+    private LocationCode locationCode;
 
-/**
-*To provide the Area part of an Adrress.
-*
-*/    private String locationAddressArea;
+    /**
+     * To provide the Area part of an Adrress.
+     */
+    private String locationAddressArea;
 
-/**
-*To define the longitude of the Location.
-*
-*/    private double locationLongitude;
+    /**
+     * To define the longitude of the Location.
+     */
+    private double locationLongitude;
 
-/**
-*To provide the country name and or country code.
-*
-*/    private String locationAddressCountry;
+    /**
+     * To provide the country name and or country code.
+     */
+    private String locationAddressCountry;
 
-/**
-*The latitude of the Location.
-*
-*/    private double locationLatitude;
+    /**
+     * The latitude of the Location.
+     */
+    private double locationLatitude;
 
-/**
-*The number given to the house or an entrance in a street
-        
-*
-*/    private String locationAddressHouseNumber;
+    /**
+     * The number given to the house or an entrance in a street
+     */
+    private String locationAddressHouseNumber;
 
-/**
-*To identify a Resource associated with an Asset or an EditorialObject or a
-            PublicationEvent or another Resource.
-        
-*
-*/    private Resource relatedResource;
+    /**
+     * To identify a Resource associated with an Asset or an EditorialObject or a
+     * PublicationEvent or another Resource.
+     */
+    private Resource relatedResource;
 
-/**
-*To provide the name of a city, village, etc.
-*
-*/    private String locationAddressMunicipality;
+    /**
+     * To provide the name of a city, village, etc.
+     */
+    private String locationAddressMunicipality;
 }

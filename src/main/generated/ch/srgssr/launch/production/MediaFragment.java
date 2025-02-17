@@ -7,20 +7,17 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*a MediaResource that is a temporal or spatial segment of a Resource as defined by
-            the MediaFragment URI (http://www.w3.org/2008/WebVideo/Fragments/WD-media-fragments-spec/)
-        
-*
-*
-*/@Accessors(chain = true)
+ * a MediaResource that is a temporal or spatial segment of a Resource as defined by
+ * the MediaFragment URI (http://www.w3.org/2008/WebVideo/Fragments/WD-media-fragments-spec/)
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class MediaFragment extends MediaResource {
 
-/**
-*To identify the Media Resource to which a Media Fragment belongs to
-        
-*
-*/    private MediaResource isMediaFragmentOf;
+    /**
+     * To identify the Media Resource to which a Media Fragment belongs to
+     */
+    private MediaResource isMediaFragmentOf;
 }

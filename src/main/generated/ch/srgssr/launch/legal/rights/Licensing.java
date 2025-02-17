@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To define the licensing terms associated with an Asset.
-*
-*
-*/@Accessors(chain = true)
+ * To define the licensing terms associated with an Asset.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

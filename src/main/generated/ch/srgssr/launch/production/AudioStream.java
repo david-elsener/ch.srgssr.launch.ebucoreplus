@@ -7,12 +7,10 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*An audioStreamFormat describes a decodable signal - PCM signal or a Dolby E
-            stream for example. It is composed of one or more AudioTracks.
-        
-*
-*
-*/@Accessors(chain = true)
+ * An audioStreamFormat describes a decodable signal - PCM signal or a Dolby E
+ * stream for example. It is composed of one or more AudioTracks.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

@@ -7,12 +7,10 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To provide information about a particular type of content potentially
-            sensitive.
-        
-*
-*
-*/@Accessors(chain = true)
+ * To provide information about a particular type of content potentially
+ * sensitive.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

@@ -7,32 +7,30 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*Custom attributes are to be associated by implementers. To provide
-            information about complex locators.
-        
-*
-*
-*/@Accessors(chain = true)
+ * Custom attributes are to be associated by implementers. To provide
+ * information about complex locators.
+ */
+@Accessors(chain = true)
 @Data
 public class Locator {
 
-/**
-*Information on the locator target.
-*
-*/    private String locatorTargetInformation;
+    /**
+     * Information on the locator target.
+     */
+    private String locatorTargetInformation;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 }

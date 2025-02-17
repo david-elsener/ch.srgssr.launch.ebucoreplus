@@ -8,19 +8,17 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*A temporal entity with zero extent or duration
-*
-*
-*/@Accessors(chain = true)
+ * A temporal entity with zero extent or duration
+ */
+@Accessors(chain = true)
 @Data
 public class Instant {
 
     private LocalDate inXSDDateTimeStamp;
 
-/**
-*The temporal reference system used by a temporal position or extent
-            description.
-        
-*
-*/    private LocalTime tRS;
+    /**
+     * The temporal reference system used by a temporal position or extent
+     * description.
+     */
+    private LocalTime tRS;
 }

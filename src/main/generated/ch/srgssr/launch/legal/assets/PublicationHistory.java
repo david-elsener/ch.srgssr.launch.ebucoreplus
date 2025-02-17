@@ -7,19 +7,16 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*A collection of PublicationEvents through which a resource has been
-            published.
-        
-*
-*
-*/@Accessors(chain = true)
+ * A collection of PublicationEvents through which a resource has been
+ * published.
+ */
+@Accessors(chain = true)
 @Data
 public class PublicationHistory {
 
-/**
-*To associate PublicationEvents with PublicationChannels or as elements of a
-            PublicationHistory or PublicationPlanning.
-        
-*
-*/    private PublicationEvent publicationEvent;
+    /**
+     * To associate PublicationEvents with PublicationChannels or as elements of a
+     * PublicationHistory or PublicationPlanning.
+     */
+    private PublicationEvent publicationEvent;
 }

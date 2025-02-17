@@ -5,46 +5,44 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*A class to log Emotions.
-*
-*
-*/@Accessors(chain = true)
+ * A class to log Emotions.
+ */
+@Accessors(chain = true)
 @Data
 public class Emotion {
 
-/**
-*To associate a concept with an Agent (e.g. Person or Character).
-        
-*
-*/    private Agent relatedAgent;
+    /**
+     * To associate a concept with an Agent (e.g. Person or Character).
+     */
+    private Agent relatedAgent;
 
-/**
-*A precise time point of a media resource
-*
-*/    private TimelinePoint start;
+    /**
+     * A precise time point of a media resource
+     */
+    private TimelinePoint start;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*A precise time point of a media resource
-*
-*/    private TimelinePoint end;
+    /**
+     * A precise time point of a media resource
+     */
+    private TimelinePoint end;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To associate a concept with a Scene
-*
-*/    private Scene relatedScene;
+    /**
+     * To associate a concept with a Scene
+     */
+    private Scene relatedScene;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 }

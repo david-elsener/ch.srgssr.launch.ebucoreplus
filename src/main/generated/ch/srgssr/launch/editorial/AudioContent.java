@@ -7,56 +7,48 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*An audioContent defines one component of a programme (e.g. background music),
-            its association with an audioGroup (e.g. a 2.0 audioPackFormat of audioChannelFormats for stereo
-            reproduction), its association with an audioStreamFormat, and its set of loudness parameters.
-        
-*
-*
-*/@Accessors(chain = true)
+ * An audioContent defines one component of a programme (e.g. background music),
+ * its association with an audioGroup (e.g. a 2.0 audioPackFormat of audioChannelFormats for stereo
+ * reproduction), its association with an audioStreamFormat, and its set of loudness parameters.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class AudioContent extends Programme {
 
-/**
-*The value for integrated loudness measured at AudioProgramme or AudioContent
-            level.
-        
-*
-*/    private double loudnessIntegratedLoudness;
+    /**
+     * The value for integrated loudness measured at AudioProgramme or AudioContent
+     * level.
+     */
+    private double loudnessIntegratedLoudness;
 
-/**
-*The loudness range measured at AudioProgramme or AudioContent level.
-        
-*
-*/    private double loudnessRange;
+    /**
+     * The loudness range measured at AudioProgramme or AudioContent level.
+     */
+    private double loudnessRange;
 
-/**
-*The method for loudness measurement at AudioProgramme or AudioContent
-            level.
-        
-*
-*/    private String loudnessMethod;
+    /**
+     * The method for loudness measurement at AudioProgramme or AudioContent
+     * level.
+     */
+    private String loudnessMethod;
 
-/**
-*The value for maximum max short term loudness measured at AudioProgramme or
-            AudioContent level.
-        
-*
-*/    private double loudnessMaxShortTerm;
+    /**
+     * The value for maximum max short term loudness measured at AudioProgramme or
+     * AudioContent level.
+     */
+    private double loudnessMaxShortTerm;
 
-/**
-*The value for maximum true peak loudness measured at AudioProgramme or
-            AudioContent level.
-        
-*
-*/    private double loudnessMaxTruepeak;
+    /**
+     * The value for maximum true peak loudness measured at AudioProgramme or
+     * AudioContent level.
+     */
+    private double loudnessMaxTruepeak;
 
-/**
-*The value for maximum momentary loudness measured at AudioProgramme or
-            AudioContent level.
-        
-*
-*/    private double loudnessMaxMomentary;
+    /**
+     * The value for maximum momentary loudness measured at AudioProgramme or
+     * AudioContent level.
+     */
+    private double loudnessMaxMomentary;
 }

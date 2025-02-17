@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*null
-*
-*
-*/@Accessors(chain = true)
+ * null
+ */
+@Accessors(chain = true)
 @Data
 public class Thing {
 }

@@ -7,23 +7,23 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*an EditorialWork for advertising purposes
-*
-*<pre>
-Examples:
-*- an ad for an insurance company
-            - a promotion-clip for a PSM, one of its channels, its brands
-        
-</pre>
-*/@Accessors(chain = true)
+ * an EditorialWork for advertising purposes
+ *
+ * <pre>
+ * Examples:
+ * - an ad for an insurance company
+ * - a promotion-clip for a PSM, one of its channels, its brands
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class Promotion extends EditorialWork {
 
-/**
-*To identify a Group to which an EditorialObject is a member of.
-        
-*
-*/    private EditorialGroup isMemberOf;
+    /**
+     * To identify a Group to which an EditorialObject is a member of.
+     */
+    private EditorialGroup isMemberOf;
 }

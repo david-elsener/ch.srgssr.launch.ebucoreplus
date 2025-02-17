@@ -22,183 +22,176 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*the event of publishing an Essence by a service to a channel under rights
-            conditions
-        
-*
-*<pre>
-Examples:
-*- the broadcasting of the footbal world cup final 2022 in a live video service over
-            satellite by the BBC in Great Britain
-            - the posting of Elon Musk's text "Next I'm buying Cocal Cola to put the cocaine back in" on twitter, April
-            27, 2022, in his channel @elonmusk
-        
-</pre>
-*/@Accessors(chain = true)
+ * the event of publishing an Essence by a service to a channel under rights
+ * conditions
+ *
+ *
+ * <pre>
+ * Examples:
+ * - the broadcasting of the footbal world cup final 2022 in a live video service over
+ * satellite by the BBC in Great Britain
+ * - the posting of Elon Musk's text "Next I'm buying Cocal Cola to put the cocaine back in" on twitter, April
+ * 27, 2022, in his channel @elonmusk
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 public class PublicationEvent {
 
-/**
-*A point of time or start of an interval
-*
-*/    private Instant startDateTime;
+    /**
+     * A point of time or start of an interval
+     */
+    private Instant startDateTime;
 
-/**
-*To falg this is a first showing PublicationEvent on this service.
-        
-*
-*/    private boolean firstShowingThisService;
+    /**
+     * To falg this is a first showing PublicationEvent on this service.
+     */
+    private boolean firstShowingThisService;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*To express access conditions/restrictions.
-*
-*/    private AccessConditions accessConditions;
+    /**
+     * To express access conditions/restrictions.
+     */
+    private AccessConditions accessConditions;
 
-/**
-*Specifies the title or name given to the resource. A root for the definition
-            of subproperties defining ebucore titles of different types. The ebucore title type can be used to define
-            sub-properties to optionally refine the category of the title. All value of the EBU title status
-            classification scheme (http://www.ebu.ch/metadata/cs/web/ebu_TitleStatusCodeCS_p.xml.htm) are candidates
-            subproperties of the title property as implemented for an example with alternativeTitle.
-        
-*
-*/    private String title;
+    /**
+     * Specifies the title or name given to the resource. A root for the definition
+     * of subproperties defining ebucore titles of different types. The ebucore title type can be used to define
+     * sub-properties to optionally refine the category of the title. All value of the EBU title status
+     * classification scheme (http://www.ebu.ch/metadata/cs/web/ebu_TitleStatusCodeCS_p.xml.htm) are candidates
+     * subproperties of the title property as implemented for an example with alternativeTitle.
+     */
+    private String title;
 
-/**
-*To identify the Essence used in a PublicationEvent
-*
-*/    private Essence playsOut;
+    /**
+     * To identify the Essence used in a PublicationEvent
+     */
+    private Essence playsOut;
 
-/**
-*To identify the publication medium.
-*
-*/    private PublicationMedium publicationMedium;
+    /**
+     * To identify the publication medium.
+     */
+    private PublicationMedium publicationMedium;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To express specifically the schedule date to which a PublicationEvent is
-            related in particular if the broacdast time is after midnight. For example, the schedule date would be May
-            29th and the programme is published at 1 am on May 30th, while still associated in the schedule with the
-            night of May 29th.
-        
-*
-*/    private Instant publicationScheduleDate;
+    /**
+     * To express specifically the schedule date to which a PublicationEvent is
+     * related in particular if the broacdast time is after midnight. For example, the schedule date would be May
+     * 29th and the programme is published at 1 am on May 30th, while still associated in the schedule with the
+     * night of May 29th.
+     */
+    private Instant publicationScheduleDate;
 
-/**
-*To flag this is a first showing PublicationEvent.
-*
-*/    private boolean firstShowing;
+    /**
+     * To flag this is a first showing PublicationEvent.
+     */
+    private boolean firstShowing;
 
-/**
-*To identify an Audience for which access is restricted.
-*
-*/    private Audience restrictedAudience;
+    /**
+     * To identify an Audience for which access is restricted.
+     */
+    private Audience restrictedAudience;
 
-/**
-*a connection to exchange content between provider and consumer operated on a
-            PublicationPlatform
-        
-*
-*/    private PublicationChannel publicationChannel;
+    /**
+     * a connection to exchange content between provider and consumer operated on a
+     * PublicationPlatform
+     */
+    private PublicationChannel publicationChannel;
 
-/**
-*The count of and relation to the real audience.
-*
-*/    private ConsumptionCount consumptionCount;
+    /**
+     * The count of and relation to the real audience.
+     */
+    private ConsumptionCount consumptionCount;
 
-/**
-*Describing an end of an interval
-*
-*/    private Instant endDateTime;
+    /**
+     * Describing an end of an interval
+     */
+    private Instant endDateTime;
 
-/**
-*To express usage restrictions.
-*
-*/    private UsageRestrictions usageRestrictions;
+    /**
+     * To express usage restrictions.
+     */
+    private UsageRestrictions usageRestrictions;
 
-/**
-*To associate a TargetAudience (e.g. for parental guiddance or targeting a
-            particular social group) with a EditorialObject
-        
-*
-*/    private Audience targetAudience;
+    /**
+     * To associate a TargetAudience (e.g. for parental guiddance or targeting a
+     * particular social group) with a EditorialObject
+     */
+    private Audience targetAudience;
 
-/**
-*A flag to indicate that the access to the PublicationEvent is 'free'.
-        
-*
-*/    private boolean free;
+    /**
+     * A flag to indicate that the access to the PublicationEvent is 'free'.
+     */
+    private boolean free;
 
-/**
-*A precise time point of a media resource
-*
-*/    private TimelinePoint duration;
+    /**
+     * A precise time point of a media resource
+     */
+    private TimelinePoint duration;
 
-/**
-*To identify a ConsumptionEvent related to a PublicationEvent.
-        
-*
-*/    private ConsumptionEvent consumptionEvent;
+    /**
+     * To identify a ConsumptionEvent related to a PublicationEvent.
+     */
+    private ConsumptionEvent consumptionEvent;
 
-/**
-*To identify a Service associated to a PublicationEvent.
-*
-*/    private PublicationService isReleasedBy;
+    /**
+     * To identify a Service associated to a PublicationEvent.
+     */
+    private PublicationService isReleasedBy;
 
-/**
-*To provide an abstract.
-*
-*/    private String abstract;
+    /**
+     *To provide an abstract.
+     *
+     */
+    private String abstract;
 
-/**
-*To associate PublicationEvents with PublicationChannels or as elements of a
-            PublicationHistory or PublicationPlanning.
-        
-*
-*/    private PublicationEvent publicationEvent;
+    /**
+     * To associate PublicationEvents with PublicationChannels or as elements of a
+     * PublicationHistory or PublicationPlanning.
+     */
+    private PublicationEvent publicationEvent;
 
-/**
-*The editorial object associated to a PublicationEvent.
-*
-*/    private EditorialObject publishes;
+    /**
+     * The editorial object associated to a PublicationEvent.
+     */
+    private EditorialObject publishes;
 
-/**
-*The intellectual property or other contractual (e.g. publication) Rights
-            associated to an Asset, a Contract, or a PublicationEvent. Rights originate from a Contract. Rights are
-            associated to EditorialObjects, MediaResource or Essences through the definition of an Asset. Rights have
-            associated RightsHolders.
-        
-*
-*/    private Rights isCoveredBy;
+    /**
+     * The intellectual property or other contractual (e.g. publication) Rights
+     * associated to an Asset, a Contract, or a PublicationEvent. Rights originate from a Contract. Rights are
+     * associated to EditorialObjects, MediaResource or Essences through the definition of an Asset. Rights have
+     * associated RightsHolders.
+     */
+    private Rights isCoveredBy;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*The region where the publication takes place.
-*
-*/    private Location publicationRegion;
+    /**
+     * The region where the publication takes place.
+     */
+    private Location publicationRegion;
 
-/**
-*A flag to signal that content is live
-*
-*/    private boolean live;
+    /**
+     * A flag to signal that content is live
+     */
+    private boolean live;
 
-/**
-*To express coverage restrictions.
-*
-*/    private CoverageRestrictions coverageRestrictions;
+    /**
+     * To express coverage restrictions.
+     */
+    private CoverageRestrictions coverageRestrictions;
 
     private AlternativeTitle alternativeTitle;
 }

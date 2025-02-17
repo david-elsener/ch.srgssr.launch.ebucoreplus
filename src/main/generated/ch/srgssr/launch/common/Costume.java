@@ -9,44 +9,43 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*a dress of an actress/actor used in a production
-*
-*<pre>
-Examples:
-*- the uniforms worn by the Star Trek crew
-</pre>
-*/@Accessors(chain = true)
+ * a dress of an actress/actor used in a production
+ *
+ * <pre>
+ * Examples:
+ * - the uniforms worn by the Star Trek crew
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class Costume extends Artefact {
 
-/**
-*The gender of a Person e.g. male or female.
-*
-*/    private String gender;
+    /**
+     * The gender of a Person e.g. male or female.
+     */
+    private String gender;
 
-/**
-*To provide a link to a Logo
-*
-*/    private Logo linkToLogo;
+    /**
+     * To provide a link to a Logo
+     */
+    private Logo linkToLogo;
 
-/**
-*To provide a link to a Sticker
-*
-*/    private Sticker linkToSticker;
+    /**
+     * To provide a link to a Sticker
+     */
+    private Sticker linkToSticker;
 
-/**
-*To collect all information available useful to determine the size of a
-            Costume.
-        
-*
-*/    private String costumeSizeInformation;
+    /**
+     * To collect all information available useful to determine the size of a
+     * Costume.
+     */
+    private String costumeSizeInformation;
 
-/**
-*Range: a string or a Concept code from a vocabulary, e.g. Getty To define the
-            texture of a Costume.
-        
-*
-*/    private String costumeTexture;
+    /**
+     * Range: a string or a Concept code from a vocabulary, e.g. Getty To define the
+     * texture of a Costume.
+     */
+    private String costumeTexture;
 }

@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To signal the presence of hard of hearing captioning.
-*
-*
-*/@Accessors(chain = true)
+ * To signal the presence of hard of hearing captioning.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

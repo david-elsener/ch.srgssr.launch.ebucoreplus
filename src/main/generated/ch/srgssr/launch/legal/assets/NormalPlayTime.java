@@ -9,23 +9,21 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*null
-*
-*
-*/@Accessors(chain = true)
+ * null
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class NormalPlayTime extends TimelinePoint {
 
-/**
-*a duration expressed as a string formated as ISO8601 ie PT3M23S
-        
-*
-*/    private String isoDuration;
+    /**
+     * a duration expressed as a string formated as ISO8601 ie PT3M23S
+     */
+    private String isoDuration;
 
-/**
-*A time expressed as a normal time of day
-*
-*/    private LocalTime timeOfDay;
+    /**
+     * A time expressed as a normal time of day
+     */
+    private LocalTime timeOfDay;
 }

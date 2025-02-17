@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To describe a physical resource e.g. a tape.
-*
-*
-*/@Accessors(chain = true)
+ * To describe a physical resource e.g. a tape.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

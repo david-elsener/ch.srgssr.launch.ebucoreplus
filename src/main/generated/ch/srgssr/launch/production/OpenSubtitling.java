@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*Open subtitles are burned in the image.
-*
-*
-*/@Accessors(chain = true)
+ * Open subtitles are burned in the image.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

@@ -9,10 +9,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*A Contact e.g. for a Person or Organisation.
-*
-*
-*/@Accessors(chain = true)
+ * A Contact e.g. for a Person or Organisation.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

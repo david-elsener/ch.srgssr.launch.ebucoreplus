@@ -9,19 +9,17 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To signal the presence of subtitles for translation in alternative
-            languages.
-        
-*
-*
-*/@Accessors(chain = true)
+ * To signal the presence of subtitles for translation in alternative
+ * languages.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class Subtitling extends Track {
 
-/**
-*To identify the source of the Subtitling resource.
-*
-*/    private Agent subtitlingSource;
+    /**
+     * To identify the source of the Subtitling resource.
+     */
+    private Agent subtitlingSource;
 }

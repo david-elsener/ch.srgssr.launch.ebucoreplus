@@ -5,10 +5,9 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*A code given to a Location.
-*
-*
-*/@Accessors(chain = true)
+ * A code given to a Location.
+ */
+@Accessors(chain = true)
 @Data
 public class LocationCode {
 }

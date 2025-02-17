@@ -9,27 +9,23 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*A class specific to the annotation of a text or portions of text.
-        
-*
-*
-*/@Accessors(chain = true)
+ * A class specific to the annotation of a text or portions of text.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class TextAnnotation extends Annotation {
 
-/**
-*To identify the start character index of the portion of text to which the
-            Annotation applies.
-        
-*
-*/    private int characterStartIndex;
+    /**
+     * To identify the start character index of the portion of text to which the
+     * Annotation applies.
+     */
+    private int characterStartIndex;
 
-/**
-*To identify the end character index of the portion of text to which the
-            Annotation applies.
-        
-*
-*/    private int characterEndIndex;
+    /**
+     * To identify the end character index of the portion of text to which the
+     * Annotation applies.
+     */
+    private int characterEndIndex;
 }

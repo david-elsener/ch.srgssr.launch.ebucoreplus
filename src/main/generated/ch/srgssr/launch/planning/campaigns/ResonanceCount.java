@@ -10,52 +10,52 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*the aggregation of ResonanceEvents to indicate performance of a content or a
-            service
-        
-*
-*<pre>
-Examples:
-*- market share of viewers on a sports live broadcast
-            - weekly page impressions of a news website
-            - number of daily unique users on a news website
-            - number of likes on an instagram post
-            - number of views of a movie from a VOD portal
-        
-</pre>
-*/@Accessors(chain = true)
+ * the aggregation of ResonanceEvents to indicate performance of a content or a
+ * service
+ *
+ *
+ * <pre>
+ * Examples:
+ * - market share of viewers on a sports live broadcast
+ * - weekly page impressions of a news website
+ * - number of daily unique users on a news website
+ * - number of likes on an instagram post
+ * - number of views of a movie from a VOD portal
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 public class ResonanceCount {
 
-/**
-*The Agent who analyses data to define a Resonance.
-*
-*/    private Agent isMeasuredBy;
+    /**
+     * The Agent who analyses data to define a Resonance.
+     */
+    private Agent isMeasuredBy;
 
-/**
-*A locator from where the Resource can be accessed.
-*
-*/    private Locator locator;
+    /**
+     * A locator from where the Resource can be accessed.
+     */
+    private Locator locator;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*One of the ResonanceEvents aggregated into a meaningfulf set of Resonance
-            data.
-        
-*
-*/    private ResonanceEvent compilesResonanceEvents;
+    /**
+     * One of the ResonanceEvents aggregated into a meaningfulf set of Resonance
+     * data.
+     */
+    private ResonanceEvent compilesResonanceEvents;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 }

@@ -9,10 +9,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To define a picture display format code.
-*
-*
-*/@Accessors(chain = true)
+ * To define a picture display format code.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

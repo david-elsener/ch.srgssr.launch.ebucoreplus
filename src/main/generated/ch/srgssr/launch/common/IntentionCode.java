@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To indicate the purpose for which content was created.
-*
-*
-*/@Accessors(chain = true)
+ * To indicate the purpose for which content was created.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

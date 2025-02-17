@@ -7,35 +7,34 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*To identify the costs associated to a Contract.
-*
-*
-*/@Accessors(chain = true)
+ * To identify the costs associated to a Contract.
+ */
+@Accessors(chain = true)
 @Data
 public class ContractCost {
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*The amount of the ContractCost.
-*
-*/    private double contractCostAmount;
+    /**
+     * The amount of the ContractCost.
+     */
+    private double contractCostAmount;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*The currency of the amount of the ContractCost.
-*
-*/    private Object contractCostAmountCurrency;
+    /**
+     * The currency of the amount of the ContractCost.
+     */
+    private Object contractCostAmountCurrency;
 }

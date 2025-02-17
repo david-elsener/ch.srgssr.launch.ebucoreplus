@@ -7,61 +7,61 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*an EditorialWork as a stand-alone piece or an episode of a Serial or Series,
-            intended to be consumed as a whole
-        
-*
-*<pre>
-Examples:
-*- the movie "Titanic"
-            - the episode 2 "The Blind Banker" of the series "Sherlock", a detective series
-            - today's episode of "BBC News", the daily news show serial
-            - the episode 2 "Frozen Worlds" of the series "Our Planet", a nature documentary series
-            - next Monday's episode of the BBC serial "Panorama", a political report
-        
-</pre>
-*/@Accessors(chain = true)
+ * an EditorialWork as a stand-alone piece or an episode of a Serial or Series,
+ * intended to be consumed as a whole
+ *
+ *
+ * <pre>
+ * Examples:
+ * - the movie "Titanic"
+ * - the episode 2 "The Blind Banker" of the series "Sherlock", a detective series
+ * - today's episode of "BBC News", the daily news show serial
+ * - the episode 2 "Frozen Worlds" of the series "Our Planet", a nature documentary series
+ * - next Monday's episode of the BBC serial "Panorama", a political report
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class Programme extends EditorialWork {
 
-/**
-*The Episode of a Season.
-*
-*/    private Season isEpisodeOfSeason;
+    /**
+     * The Episode of a Season.
+     */
+    private Season isEpisodeOfSeason;
 
-/**
-*a EditorialGroup telling a whole story in parts, each continuing the preceding
-            part
-        
-*
-*/    private Serial isEpisodeOfSerial;
+    /**
+     * a EditorialGroup telling a whole story in parts, each continuing the preceding
+     * part
+     */
+    private Serial isEpisodeOfSerial;
 
-/**
-*The Episode of a Series or a Season.
-*
-*/    private EditorialGroup isEpisodeOf;
+    /**
+     * The Episode of a Series or a Season.
+     */
+    private EditorialGroup isEpisodeOf;
 
-/**
-*The Episode Number in a season
-*
-*/    private int episodeNumberInSeason;
+    /**
+     * The Episode Number in a season
+     */
+    private int episodeNumberInSeason;
 
-/**
-*The Episode Number
-*
-*/    private int episodeNumber;
+    /**
+     * The Episode Number
+     */
+    private int episodeNumber;
 
-/**
-*The Episode Number in a series
-*
-*/    private int episodeNumberInSeries;
+    /**
+     * The Episode Number in a series
+     */
+    private int episodeNumberInSeries;
 
     private int episodeNumberInSerial;
 
-/**
-*The Episode of a Series.
-*
-*/    private Series isEpisodeOfSeries;
+    /**
+     * The Episode of a Series.
+     */
+    private Series isEpisodeOfSeries;
 }

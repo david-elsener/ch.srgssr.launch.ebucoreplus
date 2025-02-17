@@ -7,10 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*Closed captioning is provided as separate content.
-*
-*
-*/@Accessors(chain = true)
+ * Closed captioning is provided as separate content.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

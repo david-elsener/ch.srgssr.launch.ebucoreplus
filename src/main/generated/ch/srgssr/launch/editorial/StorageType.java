@@ -2,10 +2,8 @@
 package ch.srgssr.launch.editorial;
 
 /**
-*The type of storage used for the repository. This is provided as free text in
-            an annotation label or as an identifier pointing to a term in a classification scheme.
-        
-*
-*
-*/public enum StorageType {
+ * The type of storage used for the repository. This is provided as free text in
+ * an annotation label or as an identifier pointing to a term in a classification scheme.
+ */
+public enum StorageType {
 }

@@ -7,11 +7,9 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*A SportItem aggregates all information about a sport event.
-        
-*
-*
-*/@Accessors(chain = true)
+ * A SportItem aggregates all information about a sport event.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

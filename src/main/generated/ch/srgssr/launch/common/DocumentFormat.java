@@ -9,13 +9,11 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*To provide technical information about the format of a document such as the
-            orientation. This is provided as free text in an annotation label or as an identifier pointing to a term in
-            a classification scheme.
-        
-*
-*
-*/@Accessors(chain = true)
+ * To provide technical information about the format of a document such as the
+ * orientation. This is provided as free text in an annotation label or as an identifier pointing to a term in
+ * a classification scheme.
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

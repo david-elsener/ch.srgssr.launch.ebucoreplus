@@ -9,98 +9,90 @@ import lombok.Data;
 import lombok.experimental.Accessors;
 
 /**
-*All the information about the rating/evaluation given to a media resource by
-            an Agent i.e. a person/Contact or Organisation. This is provided as free text in an annotation label or as
-            an identifier pointing to a term in a classification scheme.
-        
-*
-*
-*/@Accessors(chain = true)
+ * All the information about the rating/evaluation given to a media resource by
+ * an Agent i.e. a person/Contact or Organisation. This is provided as free text in an annotation label or as
+ * an identifier pointing to a term in a classification scheme.
+ */
+@Accessors(chain = true)
 @Data
 public class Rating {
 
-/**
-*Logos can be used in a variety of contexts. Logo can be associated with an
-            Organisation or a Service or a PublicationChannel.
-        
-*
-*/    private Logo logo;
+    /**
+     * Logos can be used in a variety of contexts. Logo can be associated with an
+     * Organisation or a Service or a PublicationChannel.
+     */
+    private Logo logo;
 
-/**
-*To provide a visual representation of a Rating / AufdienceRating /
-            AudienceLevel.
-        
-*
-*/    private Picture pictogram;
+    /**
+     * To provide a visual representation of a Rating / AufdienceRating /
+     * AudienceLevel.
+     */
+    private Picture pictogram;
 
-/**
-*To identify the environment in which rating applies.
-*
-*/    private String ratingSystemEnvironment;
+    /**
+     * To identify the environment in which rating applies.
+     */
+    private String ratingSystemEnvironment;
 
-/**
-*To identify the asset to which the Rating applies.
-*
-*/    private Asset appliesTo;
+    /**
+     * To identify the asset to which the Rating applies.
+     */
+    private Asset appliesTo;
 
-/**
-*A reason given for a rating.
-*
-*/    private String reason;
+    /**
+     * A reason given for a rating.
+     */
+    private String reason;
 
-/**
-*The minimum value of the scale used for rating a MediaResource.
-        
-*
-*/    private String ratingScaleMin;
+    /**
+     * The minimum value of the scale used for rating a MediaResource.
+     */
+    private String ratingScaleMin;
 
-/**
-*The maximum value of the scale used for the Rating.
-*
-*/    private String ratingScaleMax;
+    /**
+     * The maximum value of the scale used for the Rating.
+     */
+    private String ratingScaleMax;
 
-/**
-*To identify a Rating system by its name.
-*
-*/    private String ratingSystemName;
+    /**
+     * To identify a Rating system by its name.
+     */
+    private String ratingSystemName;
 
-/**
-*To associate an Identifier with an Asset.
-*
-*/    private Identifier identifier;
+    /**
+     * To associate an Identifier with an Asset.
+     */
+    private Identifier identifier;
 
-/**
-*A summary of the resource.
-*
-*/    private String description;
+    /**
+     * A summary of the resource.
+     */
+    private String description;
 
-/**
-*To express a free text Rating value defined in a rating classification
-            scheme.
-        
-*
-*/    private String ratingValue;
+    /**
+     * To express a free text Rating value defined in a rating classification
+     * scheme.
+     */
+    private String ratingValue;
 
-/**
-*The designation of the resource.
-*
-*/    private String name;
+    /**
+     * The designation of the resource.
+     */
+    private String name;
 
-/**
-*A flag to indicate that the EditorialObejct has not been rated.
-        
-*
-*/    private boolean notRated;
+    /**
+     * A flag to indicate that the EditorialObejct has not been rated.
+     */
+    private boolean notRated;
 
-/**
-*To identify an Agent who has provided a Rating.
-*
-*/    private Agent ratingProvider;
+    /**
+     * To identify an Agent who has provided a Rating.
+     */
+    private Agent ratingProvider;
 
-/**
-*To define the Location (e.g. country, region) to which Rating and
-            TargetAudience do NOT apply.
-        
-*
-*/    private CountryCode appliesOutOf;
+    /**
+     * To define the Location (e.g. country, region) to which Rating and
+     * TargetAudience do NOT apply.
+     */
+    private CountryCode appliesOutOf;
 }

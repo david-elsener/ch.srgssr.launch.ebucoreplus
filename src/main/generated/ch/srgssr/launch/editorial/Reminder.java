@@ -7,30 +7,30 @@ import lombok.ToString;
 import lombok.experimental.Accessors;
 
 /**
-*an EditorialWork referring to a previously published advertisement, promotion or
-            alike, as a reminder to it
-        
-*
-*<pre>
-Examples:
-*- a 4 second repetition of the logo and the jingle of an insurance company, minutes
-            after a 15 second advertisement
-        
-</pre>
-*/@Accessors(chain = true)
+ * an EditorialWork referring to a previously published advertisement, promotion or
+ * alike, as a reminder to it
+ *
+ *
+ * <pre>
+ * Examples:
+ * - a 4 second repetition of the logo and the jingle of an insurance company, minutes
+ * after a 15 second advertisement
+ *
+ * </pre>
+ */
+@Accessors(chain = true)
 @Data
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 public class Reminder extends EditorialWork {
 
-/**
-*an EditorialWork for advertising purposes
-*
-*/    private Promotion promotion;
+    /**
+     * an EditorialWork for advertising purposes
+     */
+    private Promotion promotion;
 
-/**
-*To identify a Group to which an EditorialObject is a member of.
-        
-*
-*/    private EditorialGroup isMemberOf;
+    /**
+     * To identify a Group to which an EditorialObject is a member of.
+     */
+    private EditorialGroup isMemberOf;
 }
