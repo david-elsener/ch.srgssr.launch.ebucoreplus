@@ -1,4 +1,4 @@
-package ch.srgssr.launch.ebucoreplus.service;
+package ch.srgssr.launch.ebucoreplus.collector;
 
 import ch.srgssr.launch.ebucoreplus.model.DomainClass;
 import ch.srgssr.launch.ebucoreplus.model.DomainProperty;

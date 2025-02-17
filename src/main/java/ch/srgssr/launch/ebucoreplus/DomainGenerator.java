@@ -1,7 +1,7 @@
 package ch.srgssr.launch.ebucoreplus;
 
-import ch.srgssr.launch.ebucoreplus.service.DomainClassCollector;
-import ch.srgssr.launch.ebucoreplus.service.DomainClassGenerator;
+import ch.srgssr.launch.ebucoreplus.collector.DomainClassCollector;
+import ch.srgssr.launch.ebucoreplus.generator.DomainClassGenerator;
 import java.io.IOException;
 import lombok.extern.slf4j.Slf4j;
 import org.semanticweb.owlapi.apibinding.OWLManager;

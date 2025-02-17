@@ -1,7 +1,8 @@
-package ch.srgssr.launch.ebucoreplus.service;
+package ch.srgssr.launch.ebucoreplus.collector;
 
 import ch.srgssr.launch.ebucoreplus.model.*;
 import java.util.*;
+import java.util.function.Predicate;
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -23,9 +24,11 @@ public class DomainClassCollector {
 
   public void collectDomainClasses() {
     processClasses();
+    processClassHierarchies();
     processProperties();
     postProcessClasses();
     assignDomainModulesToDomainClasses();
+    assignRemainingDomainModulesToDomainClasses();
     assignDomainModulesToEnumClasses();
   }
 
@@ -38,6 +41,27 @@ public class DomainClassCollector {
       var domainClass = initializeDomainClass(owlClass);
       log.info("initialized class {}", owlClass.getIRI().getIRIString());
       domainClasses.add(domainClass);
+    }
+  }
+
+  private void processClassHierarchies() {
+    for (var domainClass : domainClasses) {
+      var superClasses =
+          ontology.getSubClassAxiomsForSubClass(domainClass.getOwlClass()).stream()
+              .map(OWLSubClassOfAxiom::getSuperClass)
+              .filter(Predicate.not(OWLRestriction.class::isInstance))
+              .filter(Objects::nonNull)
+              .toList();
+      if (superClasses.size() == 1) {
+        var superClass = superClasses.getFirst().toString().replace("<", "").replace(">", "");
+        if (!EXCLUSIONS_POST_PROCESSING.contains(superClass)) {
+          domainClass.setSuperClass(findClassByUri(superClass));
+        }
+      } else if (superClasses.size() > 1) {
+        throw new IllegalStateException(
+            "found more than 1 direct super class for %s: %s"
+                .formatted(domainClass.getUri(), superClasses));
+      }
     }
   }
 
@@ -75,31 +99,137 @@ public class DomainClassCollector {
     domainClasses.addAll(sanitizedDomainClasses);
   }
 
+  private List<DomainClassReference> collectClassTree(
+      DomainClass domainClass, boolean includeInOutReferences) {
+    var tree = new ArrayList<DomainClassReference>();
+    tree.add(domainClass);
+    tree.addAll(collectSuperClasses(domainClass));
+    if (includeInOutReferences) {
+      tree.addAll(collectInOutReferences(domainClass, new ArrayList<>(), true));
+    }
+    return tree;
+  }
+
+  private List<DomainClassReference> collectClassTree(DomainEnumClass enumClass) {
+    var tree = new ArrayList<DomainClassReference>();
+    tree.add(enumClass);
+    tree.addAll(collectInReferences(enumClass, new ArrayList<>()));
+    return tree;
+  }
+
+  private List<DomainClassReference> collectSuperClasses(DomainClass domainClass) {
+    var superClasses = new ArrayList<DomainClassReference>();
+    var currentClass = domainClass;
+    while (currentClass.getSuperclass() != null) {
+      superClasses.add(currentClass.getSuperclass());
+      currentClass = currentClass.getSuperclass();
+    }
+    return superClasses;
+  }
+
+  private List<DomainClassReference> collectInOutReferences(
+      DomainClass domainClass, List<String> visitedClasses, boolean includeOutReferences) {
+    var inOutReferences = new ArrayList<DomainClassReference>();
+    if (visitedClasses.contains(domainClass.getUri())) {
+      return inOutReferences;
+    }
+    inOutReferences.addAll(
+        domainClasses.stream()
+            .filter(other -> !other.getUri().equals(domainClass.getUri()))
+            .filter(other -> referencesClass(other.getProperties(), domainClass))
+            .distinct()
+            .toList());
+
+    if (includeOutReferences) {
+      inOutReferences.addAll(
+          domainClass.getProperties().stream()
+              .filter(DomainPropertyObject.class::isInstance)
+              .map(DomainPropertyObject.class::cast)
+              .map(DomainPropertyObject::getDomainClassReference)
+              .distinct()
+              .toList());
+    }
+
+    visitedClasses.add(domainClass.getUri());
+
+    return inOutReferences;
+  }
+
+  private List<DomainClassReference> collectInReferences(
+      DomainEnumClass enumClass, List<String> visitedClasses) {
+    var references = new ArrayList<DomainClassReference>();
+    if (visitedClasses.contains(enumClass.getUri())) {
+      return references;
+    }
+    references.addAll(
+        domainClasses.stream()
+            .filter(other -> !other.getUri().equals(enumClass.getUri()))
+            .filter(other -> referencesClass(other.getProperties(), other))
+            .distinct()
+            .toList());
+    visitedClasses.add(enumClass.getUri());
+
+    references.addAll(
+        references.stream()
+            .filter(DomainClass.class::isInstance)
+            .map(DomainClass.class::cast)
+            .map(inOutReference -> collectInOutReferences(inOutReference, visitedClasses, false))
+            .flatMap(List::stream)
+            .distinct()
+            .toList());
+
+    return references;
+  }
+
+  private boolean referencesClass(List<DomainProperty> properties, DomainClass domainClass) {
+    return properties.stream()
+        .filter(DomainPropertyObject.class::isInstance)
+        .map(DomainPropertyObject.class::cast)
+        .anyMatch(property -> matchesReference(property, domainClass.getName()));
+  }
+
   private void assignDomainModulesToDomainClasses() {
     for (var domainClass : domainClasses) {
-      if (findModuleByClassName(domainClass.getName()) != null) {
-        domainClass.setModule(findModuleByClassName(domainClass.getName()));
-      } else if (findModuleByObjectProperty(domainClass) != null) {
-        domainClass.setModule(findModuleByObjectProperty(domainClass));
-      } else {
-        Optional.ofNullable(findReferencingClass(domainClass.getName()))
-            .map(this::findModuleByClassName)
-            .ifPresent(domainClass::setModule);
+      if (domainClass.getModule() == null) {
+        var module =
+            collectClassTree(domainClass, false).stream()
+                .map(DomainClassReference::getName)
+                .map(this::findModuleByClassName)
+                .filter(Objects::nonNull)
+                .distinct()
+                .findFirst()
+                .orElse(null);
+        domainClass.setModule(module);
+      }
+    }
+  }
+
+  private void assignRemainingDomainModulesToDomainClasses() {
+    for (var domainClass : domainClasses) {
+      if (domainClass.getModule() == null) {
+        var module =
+            collectClassTree(domainClass, true).stream()
+                .map(DomainClassReference::getModule)
+                .filter(Objects::nonNull)
+                .distinct()
+                .findFirst()
+                .orElse(DomainModule.COMMON);
+        domainClass.setModule(module);
       }
     }
   }
 
   private void assignDomainModulesToEnumClasses() {
     for (var enumClass : domainEnumClasses) {
-      var module = findModuleByClassName(enumClass.getName());
-      if (module != null) {
-        enumClass.setModule(module);
-      } else {
-
-        Optional.ofNullable(findReferencingClass(enumClass.getName()))
-            .map(this::findModuleByClassName)
-            .ifPresent(enumClass::setModule);
-      }
+      var module =
+          collectClassTree(enumClass).stream()
+              .map(DomainClassReference::getName)
+              .map(this::findModuleByClassName)
+              .filter(Objects::nonNull)
+              .distinct()
+              .findFirst()
+              .orElse(DomainModule.COMMON);
+      enumClass.setModule(module);
     }
   }
 
@@ -107,62 +237,6 @@ public class DomainClassCollector {
     for (var module : DomainModule.values()) {
       if (module.getRootEntities() != null && module.getRootEntities().contains(className)) {
         return module;
-      }
-    }
-    return null;
-  }
-
-  private DomainModule findModuleByObjectProperty(DomainClass domainClass) {
-    return findModuleByObjectProperty(domainClass, new ArrayList<>());
-  }
-
-  private DomainModule findModuleByObjectProperty(
-      DomainClass domainClass, List<String> visitedClasses) {
-    log.info("findModuleByObjectProperty for {}", domainClass.getName());
-    visitedClasses.add(domainClass.getName());
-    var objectProperties =
-        domainClass.getProperties().stream()
-            .filter(DomainPropertyObject.class::isInstance)
-            .map(DomainPropertyObject.class::cast)
-            .toList();
-    var module =
-        objectProperties.stream()
-            .map(DomainPropertyObject::getDomainClassReference)
-            .map(DomainClassReference::getName)
-            .map(this::findModuleByClassName)
-            .filter(Objects::nonNull)
-            .findFirst()
-            .orElse(null);
-    if (module != null) {
-      return module;
-    }
-    for (var objectProperty : objectProperties) {
-      var referencedClass = findClassByUri(objectProperty.getDomainClassReference().getUri());
-      if (referencedClass.getName().equals(domainClass.getName())) {
-        continue; // skip self-reference
-      }
-      if (visitedClasses.contains(referencedClass.getName())) {
-        continue; // already checked, probably bidirectional
-      }
-      log.info("resolving transitive references for {}", referencedClass.getName());
-      visitedClasses.add(referencedClass.getName());
-      var transitiveModule = findModuleByObjectProperty(referencedClass, visitedClasses);
-      if (transitiveModule != null) {
-        return transitiveModule;
-      }
-    }
-    return null;
-  }
-
-  private String findReferencingClass(String referencedClassName) {
-    for (var domainClass : domainClasses) {
-      var referencesClass =
-          domainClass.getProperties().stream()
-              .filter(DomainPropertyObject.class::isInstance)
-              .map(DomainPropertyObject.class::cast)
-              .anyMatch(property -> matchesReference(property, referencedClassName));
-      if (referencesClass) {
-        return domainClass.getName();
       }
     }
     return null;
@@ -218,7 +292,6 @@ public class DomainClassCollector {
             .name(owlClass.getIRI().getShortForm())
             .description(getDescriptionEn(owlClass))
             .example(getExampleEn(owlClass))
-            .module(DomainModule.COMMON)
             .build();
     domainClasses.add(domainClass);
     return domainClass;

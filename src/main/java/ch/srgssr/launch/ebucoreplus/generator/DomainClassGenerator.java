@@ -1,7 +1,5 @@
-package ch.srgssr.launch.ebucoreplus.service;
+package ch.srgssr.launch.ebucoreplus.generator;
 
-import ch.srgssr.launch.ebucoreplus.generator.DomainClassContentProvider;
-import ch.srgssr.launch.ebucoreplus.generator.DomainEnumClassContentProvider;
 import ch.srgssr.launch.ebucoreplus.model.DomainClass;
 import ch.srgssr.launch.ebucoreplus.model.DomainEnumClass;
 import ch.srgssr.launch.ebucoreplus.model.DomainModule;

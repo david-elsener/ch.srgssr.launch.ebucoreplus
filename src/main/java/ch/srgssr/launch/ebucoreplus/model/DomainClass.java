@@ -36,7 +36,7 @@ public class DomainClass implements SchemaObject, SchemaEntity, DomainClassRefer
   }
 
   @Override
-  public SchemaEntity getSuperclass() {
+  public DomainClass getSuperclass() {
     return superClass;
   }
 
