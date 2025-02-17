@@ -15,6 +15,6 @@ public class SimpleJavaType implements SchemaEntity {
 
   @Override
   public String getName() {
-    return clazz.getName();
+    return clazz.getSimpleName();
   }
 }

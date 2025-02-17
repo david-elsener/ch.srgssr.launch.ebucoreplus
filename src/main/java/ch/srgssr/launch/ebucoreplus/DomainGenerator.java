@@ -20,9 +20,15 @@ public class DomainGenerator {
       var manager = OWLManager.createOWLOntologyManager();
       var ontology = manager.loadOntologyFromOntologyDocument(inputStream);
 
-      var domainClasses = new DomainClassCollector(ontology).collectDomainClasses();
-      log.info("initialized {} domain classes", domainClasses.size());
-      new DomainClassGenerator().generateSourceCode(domainClasses);
+      var domainClassCollector = new DomainClassCollector(ontology);
+      domainClassCollector.collectDomainClasses();
+      var domainClasses = domainClassCollector.getDomainClasses();
+      var enumClasses = domainClassCollector.getDomainEnumClasses();
+      log.info(
+          "initialized {} domain classes and {} enum classes",
+          domainClasses.size(),
+          enumClasses.size());
+      new DomainClassGenerator().generateSourceCode(domainClasses, enumClasses);
       log.info("generation of domain classes completed successfully");
     } catch (IOException | OWLOntologyCreationException exception) {
       log.error("failed to read ontology file", exception);

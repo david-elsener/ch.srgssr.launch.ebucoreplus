@@ -21,6 +21,9 @@ public class DomainPropertyValue implements DomainProperty {
 
   @Override
   public SchemaEntity getType() {
+    if (valueType.toLowerCase().contains("object")) {
+      return CommonJavaSchemaEntity.OBJECT;
+    }
     if (valueType.toLowerCase().contains("string") || valueType.toLowerCase().contains("literal")) {
       return CommonJavaSchemaEntity.STRING;
     }

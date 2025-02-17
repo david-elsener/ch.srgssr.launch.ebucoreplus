@@ -60,7 +60,7 @@ public class DomainPropertyCollector {
                 .uri(uri.getIRIString())
                 .name(uri.getShortForm())
                 .description(getDescriptionEn(uri))
-                .domainClass(findClassByUri(getObjectType(objectProperty)))
+                .domainClassReference(findClassByUri(getObjectType(objectProperty)))
                 .build();
         domainProperties.add(property);
         log.info("initialized object property {}", property);

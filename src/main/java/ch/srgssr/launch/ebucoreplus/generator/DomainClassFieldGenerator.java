@@ -1,6 +1,7 @@
 package ch.srgssr.launch.ebucoreplus.generator;
 
 import ch.srgssr.launch.ebucoreplus.model.DomainProperty;
+import ch.srgssr.launch.ebucoreplus.model.DomainPropertyObject;
 import com.github.vladislavsevruk.generator.java.config.JavaClassGeneratorConfig;
 import com.github.vladislavsevruk.generator.java.generator.ClassElementCollectionGenerator;
 import com.github.vladislavsevruk.generator.java.generator.FieldAnnotationGenerator;
@@ -45,6 +46,19 @@ public class DomainClassFieldGenerator implements ClassElementCollectionGenerato
 
   @SuppressWarnings("java:S3457")
   private void addJavaDoc(StringBuilder stringBuilder, DomainProperty domainProperty) {
-    stringBuilder.append("/**\n*%s\n*\n*/".formatted(domainProperty.getDescription()));
+    var description = getDescription(domainProperty);
+    if (description != null) {
+      stringBuilder.append("/**\n*%s\n*\n*/".formatted(description));
+    }
+  }
+
+  private String getDescription(DomainProperty domainProperty) {
+    if (domainProperty.getDescription() != null) {
+      return domainProperty.getDescription();
+    }
+    if (domainProperty instanceof DomainPropertyObject domainPropertyObject) {
+      return domainPropertyObject.getDomainClassReference().getDescription();
+    }
+    return null;
   }
 }
